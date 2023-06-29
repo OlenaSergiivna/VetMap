@@ -29,7 +29,9 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     func getLocationName(with location: CLLocation, completion: @escaping (String?) -> Void){
         let geoCoder =  CLGeocoder()
         
-        geoCoder.reverseGeocodeLocation(location, preferredLocale: .current) { placemarks, error in
+        let preferredLocale = Locale(identifier: "uk_UA")
+        
+        geoCoder.reverseGeocodeLocation(location, preferredLocale: preferredLocale) { placemarks, error in
             
             guard let place = placemarks?.first, error == nil else {
                 completion(nil)
