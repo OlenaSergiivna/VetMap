@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9CF1596FDA36B0A07D7505C5 /* Pods_VetMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F693CA3532E094B6A8C3A4A /* Pods_VetMap.framework */; };
 		CE8FA3AF2A4A0AC1007FC908 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA3AE2A4A0AC1007FC908 /* AppDelegate.swift */; };
 		CE8FA3B12A4A0AC1007FC908 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA3B02A4A0AC1007FC908 /* SceneDelegate.swift */; };
 		CE8FA3B32A4A0AC1007FC908 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA3B22A4A0AC1007FC908 /* MapViewController.swift */; };
@@ -16,9 +17,14 @@
 		CE8FA3BE2A4A0AC4007FC908 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8FA3BC2A4A0AC4007FC908 /* LaunchScreen.storyboard */; };
 		CE8FA3C72A4A0F5C007FC908 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA3C62A4A0F5C007FC908 /* LocationManager.swift */; };
 		CE8FA3CC2A4A23E5007FC908 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA3CB2A4A23E5007FC908 /* MapManager.swift */; };
+		CEB751732A4B0ACB0044709E /* MapViewVodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB751722A4B0ACB0044709E /* MapViewVodel.swift */; };
+		CEF6B1612A4CA39C00A0E1FB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CEF6B1602A4CA39C00A0E1FB /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4DDEEFB4869AD1C5C0399AE9 /* Pods-VetMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VetMap.debug.xcconfig"; path = "Target Support Files/Pods-VetMap/Pods-VetMap.debug.xcconfig"; sourceTree = "<group>"; };
+		586C2C2C8398767B0FFB4C1A /* Pods-VetMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VetMap.release.xcconfig"; path = "Target Support Files/Pods-VetMap/Pods-VetMap.release.xcconfig"; sourceTree = "<group>"; };
+		8F693CA3532E094B6A8C3A4A /* Pods_VetMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VetMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8FA3AB2A4A0AC1007FC908 /* VetMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VetMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8FA3AE2A4A0AC1007FC908 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE8FA3B02A4A0AC1007FC908 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +36,8 @@
 		CE8FA3BF2A4A0AC4007FC908 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE8FA3C62A4A0F5C007FC908 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		CE8FA3CB2A4A23E5007FC908 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
+		CEB751722A4B0ACB0044709E /* MapViewVodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewVodel.swift; sourceTree = "<group>"; };
+		CEF6B1602A4CA39C00A0E1FB /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +45,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CF1596FDA36B0A07D7505C5 /* Pods_VetMap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30B1DAA297866F6764C4E3F7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4DDEEFB4869AD1C5C0399AE9 /* Pods-VetMap.debug.xcconfig */,
+				586C2C2C8398767B0FFB4C1A /* Pods-VetMap.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		94EA728AD41ED4ED01504F19 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F693CA3532E094B6A8C3A4A /* Pods_VetMap.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE8FA3A22A4A0AC1007FC908 = {
 			isa = PBXGroup;
 			children = (
+				CEF6B1602A4CA39C00A0E1FB /* Podfile */,
 				CE8FA3AD2A4A0AC1007FC908 /* VetMap */,
 				CE8FA3AC2A4A0AC1007FC908 /* Products */,
+				30B1DAA297866F6764C4E3F7 /* Pods */,
+				94EA728AD41ED4ED01504F19 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,7 +95,7 @@
 				CE8FA3CA2A4A23AB007FC908 /* View */,
 				CE8FA3C82A4A2397007FC908 /* ViewModel */,
 				CE8FA3C52A4A0F45007FC908 /* Managers */,
-				CE8FA3B22A4A0AC1007FC908 /* MapViewController.swift */,
+				CE8FA3B42A4A0AC1007FC908 /* Main.storyboard */,
 				CE8FA3AE2A4A0AC1007FC908 /* AppDelegate.swift */,
 				CE8FA3B02A4A0AC1007FC908 /* SceneDelegate.swift */,
 				CE8FA3BC2A4A0AC4007FC908 /* LaunchScreen.storyboard */,
@@ -89,6 +118,7 @@
 		CE8FA3C82A4A2397007FC908 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CEB751722A4B0ACB0044709E /* MapViewVodel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -103,7 +133,7 @@
 		CE8FA3CA2A4A23AB007FC908 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CE8FA3B42A4A0AC1007FC908 /* Main.storyboard */,
+				CE8FA3B22A4A0AC1007FC908 /* MapViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -115,9 +145,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE8FA3C22A4A0AC4007FC908 /* Build configuration list for PBXNativeTarget "VetMap" */;
 			buildPhases = (
+				902A1DF415CDDA5F9CA2E788 /* [CP] Check Pods Manifest.lock */,
 				CE8FA3A72A4A0AC1007FC908 /* Sources */,
 				CE8FA3A82A4A0AC1007FC908 /* Frameworks */,
 				CE8FA3A92A4A0AC1007FC908 /* Resources */,
+				9C897F821453E03A7FAC2905 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,11 +200,54 @@
 			files = (
 				CE8FA3BE2A4A0AC4007FC908 /* LaunchScreen.storyboard in Resources */,
 				CE8FA3BB2A4A0AC4007FC908 /* Assets.xcassets in Resources */,
+				CEF6B1612A4CA39C00A0E1FB /* Podfile in Resources */,
 				CE8FA3B62A4A0AC1007FC908 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		902A1DF415CDDA5F9CA2E788 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VetMap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C897F821453E03A7FAC2905 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VetMap/Pods-VetMap-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VetMap/Pods-VetMap-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VetMap/Pods-VetMap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE8FA3A72A4A0AC1007FC908 /* Sources */ = {
@@ -181,6 +256,7 @@
 			files = (
 				CE8FA3B92A4A0AC1007FC908 /* VetMap.xcdatamodeld in Sources */,
 				CE8FA3B32A4A0AC1007FC908 /* MapViewController.swift in Sources */,
+				CEB751732A4B0ACB0044709E /* MapViewVodel.swift in Sources */,
 				CE8FA3C72A4A0F5C007FC908 /* LocationManager.swift in Sources */,
 				CE8FA3AF2A4A0AC1007FC908 /* AppDelegate.swift in Sources */,
 				CE8FA3CC2A4A23E5007FC908 /* MapManager.swift in Sources */,
@@ -326,6 +402,7 @@
 		};
 		CE8FA3C32A4A0AC4007FC908 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DDEEFB4869AD1C5C0399AE9 /* Pods-VetMap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -356,6 +433,7 @@
 		};
 		CE8FA3C42A4A0AC4007FC908 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 586C2C2C8398767B0FFB4C1A /* Pods-VetMap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

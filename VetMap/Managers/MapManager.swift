@@ -14,16 +14,25 @@ class MapManager {
     
     private init() {}
     
-    func addMapPin(with location: CLLocation, for map: MKMapView, completion: @escaping(String?) -> Void) {
+    func createMapPin(with location: CLLocation, completion: @escaping(MKPointAnnotation?) -> Void) {
         
         let pin = MKPointAnnotation()
         pin.coordinate = location.coordinate
-        map.setRegion(MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7)), animated: true)
         
-        map.addAnnotation(pin)
+        completion(pin)
+    }
+    
+    func searchVeterinaryClinics(for region: MKCoordinateRegion, completion: @escaping([MKMapItem]) -> Void) {
         
-        LocationManager.shared.addLocationName(with: location) { locationName in
-            completion(locationName)
+        let request = MKLocalSearch.Request()
+        request.naturalLanguageQuery = "ветеринарная клиника"
+        request.region = region
+        
+        let search = MKLocalSearch(request: request)
+        
+        search.start { response, _ in
+            guard let response = response else { return }
+            completion(response.mapItems)
         }
     }
 }

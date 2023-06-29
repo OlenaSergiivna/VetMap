@@ -16,6 +16,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     
     var completion: ((CLLocation) -> Void)?
     
+    private var didUpdateLocation = false
     
     func getUserLocation(completion: @escaping (CLLocation)-> Void) {
         self.completion = completion
@@ -25,7 +26,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     }
     
     
-    func addLocationName(with location: CLLocation, completion: @escaping (String?) -> Void){
+    func getLocationName(with location: CLLocation, completion: @escaping (String?) -> Void){
         let geoCoder =  CLGeocoder()
         
         geoCoder.reverseGeocodeLocation(location, preferredLocale: .current) { placemarks, error in
@@ -51,8 +52,9 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.first else { return }
+        guard let location = locations.first, didUpdateLocation == false else { return }
         completion?(location)
         manager.stopUpdatingLocation()
+        didUpdateLocation = true
     }
 }
