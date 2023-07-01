@@ -17,7 +17,7 @@ class MapViewModel {
     
     var mapCenter = Observable<CLLocationCoordinate2D>(CLLocationCoordinate2D())
     
-    var vets = MutableObservableArray<MKMapItem>([])
+    var vetsAnnotations = MutableObservableArray<MKPointAnnotation>([])
     
     func fetchMapData() {
         
@@ -56,10 +56,21 @@ class MapViewModel {
     }
     
     
-    func getVetsData(for region: MKCoordinateRegion) {
+    func getVetsAnnotations(for region: MKCoordinateRegion) {
         
         MapManager.shared.searchVeterinaryClinics(for: region) { vets in
-            self.vets.insert(contentsOf: vets, at: 0)
-        } 
+            
+            var annotations = [MKPointAnnotation]()
+            
+            vets.forEach( { vet in
+                guard vet.placemark.country == "Україна" || vet.placemark.country == "Ukraine" || vet.placemark.country == "Украина" else { return }
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = vet.placemark.coordinate
+                annotation.title = vet.placemark.name
+                annotations.append(annotation)
+            })
+            
+            self.vetsAnnotations.insert(contentsOf: annotations, at: 0)
+        }
     }
 }

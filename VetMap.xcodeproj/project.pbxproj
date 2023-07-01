@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9CF1596FDA36B0A07D7505C5 /* Pods_VetMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F693CA3532E094B6A8C3A4A /* Pods_VetMap.framework */; };
+		CE5121A92A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5121A82A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift */; };
+		CE5121AB2A505C3B00C5B7E7 /*  UIViewController+ adjustLargeTitleSize().swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5121AA2A505C3B00C5B7E7 /*  UIViewController+ adjustLargeTitleSize().swift */; };
 		CE8FA3AF2A4A0AC1007FC908 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA3AE2A4A0AC1007FC908 /* AppDelegate.swift */; };
 		CE8FA3B12A4A0AC1007FC908 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA3B02A4A0AC1007FC908 /* SceneDelegate.swift */; };
 		CE8FA3B32A4A0AC1007FC908 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA3B22A4A0AC1007FC908 /* MapViewController.swift */; };
@@ -25,6 +27,8 @@
 		4DDEEFB4869AD1C5C0399AE9 /* Pods-VetMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VetMap.debug.xcconfig"; path = "Target Support Files/Pods-VetMap/Pods-VetMap.debug.xcconfig"; sourceTree = "<group>"; };
 		586C2C2C8398767B0FFB4C1A /* Pods-VetMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VetMap.release.xcconfig"; path = "Target Support Files/Pods-VetMap/Pods-VetMap.release.xcconfig"; sourceTree = "<group>"; };
 		8F693CA3532E094B6A8C3A4A /* Pods_VetMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VetMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE5121A82A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarkerAnnotationView.swift; sourceTree = "<group>"; };
+		CE5121AA2A505C3B00C5B7E7 /*  UIViewController+ adjustLargeTitleSize().swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " UIViewController+ adjustLargeTitleSize().swift"; sourceTree = "<group>"; };
 		CE8FA3AB2A4A0AC1007FC908 /* VetMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VetMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8FA3AE2A4A0AC1007FC908 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE8FA3B02A4A0AC1007FC908 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +73,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE5121AC2A505C4100C5B7E7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE5121AA2A505C3B00C5B7E7 /*  UIViewController+ adjustLargeTitleSize().swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CE8FA3A22A4A0AC1007FC908 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +107,7 @@
 				CE8FA3CA2A4A23AB007FC908 /* View */,
 				CE8FA3C82A4A2397007FC908 /* ViewModel */,
 				CE8FA3C52A4A0F45007FC908 /* Managers */,
+				CE5121AC2A505C4100C5B7E7 /* Extensions */,
 				CE8FA3B42A4A0AC1007FC908 /* Main.storyboard */,
 				CE8FA3AE2A4A0AC1007FC908 /* AppDelegate.swift */,
 				CE8FA3B02A4A0AC1007FC908 /* SceneDelegate.swift */,
@@ -134,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				CE8FA3B22A4A0AC1007FC908 /* MapViewController.swift */,
+				CE5121A82A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -260,6 +274,8 @@
 				CE8FA3C72A4A0F5C007FC908 /* LocationManager.swift in Sources */,
 				CE8FA3AF2A4A0AC1007FC908 /* AppDelegate.swift in Sources */,
 				CE8FA3CC2A4A23E5007FC908 /* MapManager.swift in Sources */,
+				CE5121AB2A505C3B00C5B7E7 /*  UIViewController+ adjustLargeTitleSize().swift in Sources */,
+				CE5121A92A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift in Sources */,
 				CE8FA3B12A4A0AC1007FC908 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

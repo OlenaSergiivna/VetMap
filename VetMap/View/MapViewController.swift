@@ -12,6 +12,7 @@ class MapViewController: UIViewController {
     
     private let map: MKMapView = {
         let mapView = MKMapView()
+        mapView.mapType = .standard
         return mapView
     }()
     
@@ -21,6 +22,8 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         
         view.addSubview(map)
+        
+        map.delegate = self
         
         mapViewModel.fetchMapData()
         
@@ -36,15 +39,8 @@ class MapViewController: UIViewController {
         self.mapViewModel.mapPin
             .dropFirst(1)
             .bind(to: self) { _, pin in
-                
+                pin.title = "Ви тут"
                 self.map.addAnnotation(pin)
-            }
-        
-        
-        self.mapViewModel.vets
-            .dropFirst(1)
-            .bind(to: self) { _, vets in
-                print("vets count: \(vets.collection.count)")
             }
         
         
@@ -55,8 +51,16 @@ class MapViewController: UIViewController {
                 let region = MKCoordinateRegion(center: mapCenter, span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
                 self.map.setRegion(region, animated: true)
                 
-                self.mapViewModel.getVetsData(for: region)
+                self.mapViewModel.getVetsAnnotations(for: region)
+            }
+        
+        
+        self.mapViewModel.vetsAnnotations
+            .dropFirst(1)
+            .bind(to: self) { _, vetsAnnotations in
                 
+                self.map.addAnnotations(vetsAnnotations.collection)
+                self.map.showAnnotations(self.map.annotations, animated: false)
             }
     }
     
@@ -69,27 +73,39 @@ class MapViewController: UIViewController {
 }
 
 
-extension UIViewController {
+extension MapViewController: MKMapViewDelegate {
     
-    func adjustLargeTitleSize() {
+    public func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
-        guard let title = navigationItem.title, #available(iOS 11.0, *) else { return }
-        
-        let maxWidth = UIScreen.main.bounds.size.width - 60
-        var fontSize = UIFont.preferredFont(forTextStyle: .largeTitle).pointSize
-        
-        var width = title.size(withAttributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize)]).width
-        
-        while width > maxWidth {
-            fontSize -= 1
-            width = title.size(withAttributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize)]).width
+        if let cluster = annotation as? MKClusterAnnotation {
+            
+            var clusterView = mapView.dequeueReusableAnnotationView(withIdentifier: "cluster") as? MKMarkerAnnotationView
+            
+            if clusterView == nil {
+                clusterView = MKMarkerAnnotationView(annotation: cluster, reuseIdentifier: "cluster")
+            } else {
+                clusterView?.annotation = cluster
+            }
+            
+            clusterView?.markerTintColor = UIColor.systemTeal
+            clusterView?.glyphText = "\(cluster.memberAnnotations.count)"
+            
+            return clusterView
+            
+        } else {
+            
+            guard annotation.title != "Ви тут" else { return nil }
+            
+            var annotationView = self.map.dequeueReusableAnnotationView(withIdentifier: "custom")
+            
+            if annotationView == nil {
+                annotationView = CustomMarkerAnnotationView(annotation: annotation, reuseIdentifier: "custom")
+                annotationView?.canShowCallout = true
+            } else {
+                annotationView?.annotation = annotation
+            }
+            
+            return annotationView
         }
-        
-        let font = UIFont.systemFont(ofSize: fontSize, weight: .bold)
-        
-        navigationController?.navigationBar.largeTitleTextAttributes = [
-            NSAttributedString.Key.font: font,
-            NSAttributedString.Key.foregroundColor: UIColor.black
-        ]
     }
 }
