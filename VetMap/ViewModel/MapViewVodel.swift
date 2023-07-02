@@ -73,4 +73,21 @@ class MapViewModel {
             self.vetsAnnotations.insert(contentsOf: annotations, at: 0)
         }
     }
+    
+    
+    func buildARoute(targetLocation: CLLocationCoordinate2D, completion: @escaping([MKRoute]) -> Void) {
+        
+        LocationManager.shared.getUserLocation { location in
+            print(location)
+            MapManager.shared.drawARoute(userLocation: location.coordinate, targetLocation: targetLocation) { result in
+                
+                switch result {
+                case .success(let routes):
+                    completion(routes)
+                case .failure(let error):
+                    print("Error while building a route: \(error)")
+                }
+            }
+        }
+    }
 }

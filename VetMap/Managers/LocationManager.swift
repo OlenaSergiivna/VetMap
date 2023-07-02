@@ -19,6 +19,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     private var didUpdateLocation = false
     
     func getUserLocation(completion: @escaping (CLLocation)-> Void) {
+        didUpdateLocation = false
         self.completion = completion
         manager.requestWhenInUseAuthorization()
         manager.delegate = self

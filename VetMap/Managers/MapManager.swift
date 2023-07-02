@@ -35,4 +35,31 @@ class MapManager {
             completion(response.mapItems)
         }
     }
+    
+    
+    func drawARoute(userLocation: CLLocationCoordinate2D, targetLocation: CLLocationCoordinate2D, completion: @escaping (Result<[MKRoute], Error>) -> Void) {
+        
+        let request = MKDirections.Request()
+        request.source = MKMapItem(placemark: MKPlacemark(coordinate: userLocation))
+        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: targetLocation))
+        request.transportType = .automobile
+        
+        let directions = MKDirections(request: request)
+        
+        directions.calculate { (response, error) in
+            
+            switch (response?.routes, error) {
+                
+            case let (.some(routes), _):
+                completion(.success(routes))
+                
+            case let (_, error?):
+                completion(.failure(error))
+                
+            default:
+                let noRoutesError = NSError(domain: "NoRoutesError", code: 0, userInfo: nil)
+                completion(.failure(noRoutesError))
+            }
+        }
+    }
 }

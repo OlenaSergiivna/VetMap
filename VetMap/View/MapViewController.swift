@@ -108,4 +108,38 @@ extension MapViewController: MKMapViewDelegate {
             return annotationView
         }
     }
+    
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        
+        if let annotation = view.annotation {
+            
+            let tagetLocation = annotation.coordinate
+            
+            mapViewModel.buildARoute(targetLocation: tagetLocation) { routes in
+                guard let route = routes.first else { return }
+                
+                self.map.removeOverlays(mapView.overlays)
+                self.map.addOverlay(route.polyline)
+                self.map.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+            }
+        }
+    }
+    
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        
+        if overlay is MKPolyline {
+            let renderer = MKPolylineRenderer(overlay: overlay)
+            renderer.strokeColor = UIColor.systemBlue.withAlphaComponent(0.5)
+            renderer.lineWidth = 8
+            return renderer
+        }
+        return MKOverlayRenderer()
+    }
+    
+    
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        map.removeOverlays(map.overlays)
+    }
 }
