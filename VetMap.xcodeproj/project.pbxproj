@@ -10,6 +10,7 @@
 		9CF1596FDA36B0A07D7505C5 /* Pods_VetMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F693CA3532E094B6A8C3A4A /* Pods_VetMap.framework */; };
 		CE5121A92A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5121A82A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift */; };
 		CE5121AB2A505C3B00C5B7E7 /*  UIViewController+ adjustLargeTitleSize().swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5121AA2A505C3B00C5B7E7 /*  UIViewController+ adjustLargeTitleSize().swift */; };
+		CE664D322A5362B500972046 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE664D312A5362B500972046 /* CustomTabBar.swift */; };
 		CE8FA3AF2A4A0AC1007FC908 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA3AE2A4A0AC1007FC908 /* AppDelegate.swift */; };
 		CE8FA3B12A4A0AC1007FC908 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA3B02A4A0AC1007FC908 /* SceneDelegate.swift */; };
 		CE8FA3B32A4A0AC1007FC908 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA3B22A4A0AC1007FC908 /* MapViewController.swift */; };
@@ -28,6 +29,7 @@
 		8F693CA3532E094B6A8C3A4A /* Pods_VetMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VetMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5121A82A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarkerAnnotationView.swift; sourceTree = "<group>"; };
 		CE5121AA2A505C3B00C5B7E7 /*  UIViewController+ adjustLargeTitleSize().swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " UIViewController+ adjustLargeTitleSize().swift"; sourceTree = "<group>"; };
+		CE664D312A5362B500972046 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		CE8FA3AB2A4A0AC1007FC908 /* VetMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VetMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8FA3AE2A4A0AC1007FC908 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE8FA3B02A4A0AC1007FC908 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			children = (
 				CE8FA3B22A4A0AC1007FC908 /* MapViewController.swift */,
 				CE5121A82A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift */,
+				CE664D312A5362B500972046 /* CustomTabBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				CE8FA3B92A4A0AC1007FC908 /* VetMap.xcdatamodeld in Sources */,
 				CE8FA3B32A4A0AC1007FC908 /* MapViewController.swift in Sources */,
 				CEB751732A4B0ACB0044709E /* MapViewVodel.swift in Sources */,
+				CE664D322A5362B500972046 /* CustomTabBar.swift in Sources */,
 				CE8FA3C72A4A0F5C007FC908 /* LocationManager.swift in Sources */,
 				CE8FA3AF2A4A0AC1007FC908 /* AppDelegate.swift in Sources */,
 				CE8FA3CC2A4A23E5007FC908 /* MapManager.swift in Sources */,
