@@ -113,6 +113,7 @@ extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         
         if let annotation = view.annotation {
+            guard annotation.title != "Ви тут" else { return }
             
             let tagetLocation = annotation.coordinate
             

@@ -78,7 +78,6 @@ class MapViewModel {
     func buildARoute(targetLocation: CLLocationCoordinate2D, completion: @escaping([MKRoute]) -> Void) {
         
         LocationManager.shared.getUserLocation { location in
-            print(location)
             MapManager.shared.drawARoute(userLocation: location.coordinate, targetLocation: targetLocation) { result in
                 
                 switch result {
