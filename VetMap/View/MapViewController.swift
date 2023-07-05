@@ -115,6 +115,8 @@ extension MapViewController: MKMapViewDelegate {
         if let annotation = view.annotation {
             guard annotation.title != "Ви тут" else { return }
             
+            guard !(annotation is MKClusterAnnotation) else { return }
+            
             let tagetLocation = annotation.coordinate
             
             mapViewModel.buildARoute(targetLocation: tagetLocation) { routes in
@@ -122,7 +124,18 @@ extension MapViewController: MKMapViewDelegate {
                 
                 self.map.removeOverlays(mapView.overlays)
                 self.map.addOverlay(route.polyline)
-                self.map.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+                
+                let padding: Double = 5000
+                let routeRect = route.polyline.boundingMapRect
+                
+                let visibleRect = MKMapRect(
+                    x: routeRect.origin.x - padding,
+                    y: routeRect.origin.y - padding,
+                    width: routeRect.size.width + 2 * padding,
+                    height: routeRect.size.height + 2 * padding
+                )
+                
+                self.map.setVisibleMapRect(visibleRect, animated: true)
             }
         }
     }

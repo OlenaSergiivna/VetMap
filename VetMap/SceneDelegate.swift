@@ -18,11 +18,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         
         
-        
         let vetsViewController: MapViewController = {
             let vetsViewController = MapViewController()
             vetsViewController.view.backgroundColor = .white
-            vetsViewController.title = "Vets"
+            vetsViewController.title = ""
             vetsViewController.tabBarItem.image = UIImage(systemName: "pawprint")
             return vetsViewController
         }()
@@ -45,7 +44,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         
         let vetsNavigationController = UINavigationController(rootViewController: vetsViewController)
-        vetsNavigationController.navigationBar.prefersLargeTitles = true
+//        vetsNavigationController.navigationBar.prefersLargeTitles = true
         vetsNavigationController.navigationItem.largeTitleDisplayMode = .always
         
         let tipsNavigationController = UINavigationController(rootViewController: tipsViewController)
