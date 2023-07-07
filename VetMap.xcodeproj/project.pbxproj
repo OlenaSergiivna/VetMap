@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		9CF1596FDA36B0A07D7505C5 /* Pods_VetMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F693CA3532E094B6A8C3A4A /* Pods_VetMap.framework */; };
+		CE1756732A572B64000F90C2 /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1756722A572B64000F90C2 /* TipsViewController.swift */; };
+		CE1756752A572B7D000F90C2 /* TipsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1756742A572B7D000F90C2 /* TipsViewModel.swift */; };
+		CE1756772A572B93000F90C2 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1756762A572B93000F90C2 /* ArticleModel.swift */; };
+		CE17567B2A573D34000F90C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE17567A2A573D34000F90C2 /* GoogleService-Info.plist */; };
+		CE37D7C02A57466900E89AAB /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE37D7BF2A57466900E89AAB /* FirebaseManager.swift */; };
 		CE5121A92A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5121A82A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift */; };
 		CE5121AB2A505C3B00C5B7E7 /*  UIViewController+ adjustLargeTitleSize().swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5121AA2A505C3B00C5B7E7 /*  UIViewController+ adjustLargeTitleSize().swift */; };
 		CE664D322A5362B500972046 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE664D312A5362B500972046 /* CustomTabBar.swift */; };
@@ -27,6 +32,11 @@
 		4DDEEFB4869AD1C5C0399AE9 /* Pods-VetMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VetMap.debug.xcconfig"; path = "Target Support Files/Pods-VetMap/Pods-VetMap.debug.xcconfig"; sourceTree = "<group>"; };
 		586C2C2C8398767B0FFB4C1A /* Pods-VetMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VetMap.release.xcconfig"; path = "Target Support Files/Pods-VetMap/Pods-VetMap.release.xcconfig"; sourceTree = "<group>"; };
 		8F693CA3532E094B6A8C3A4A /* Pods_VetMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VetMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE1756722A572B64000F90C2 /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
+		CE1756742A572B7D000F90C2 /* TipsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewModel.swift; sourceTree = "<group>"; };
+		CE1756762A572B93000F90C2 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
+		CE17567A2A573D34000F90C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE37D7BF2A57466900E89AAB /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		CE5121A82A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarkerAnnotationView.swift; sourceTree = "<group>"; };
 		CE5121AA2A505C3B00C5B7E7 /*  UIViewController+ adjustLargeTitleSize().swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " UIViewController+ adjustLargeTitleSize().swift"; sourceTree = "<group>"; };
 		CE664D312A5362B500972046 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
@@ -71,6 +81,15 @@
 				8F693CA3532E094B6A8C3A4A /* Pods_VetMap.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE1756712A572B3C000F90C2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE8FA3B22A4A0AC1007FC908 /* MapViewController.swift */,
+				CE1756722A572B64000F90C2 /* TipsViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		CE5121AC2A505C4100C5B7E7 /* Extensions */ = {
@@ -124,6 +143,7 @@
 			children = (
 				CE8FA3C62A4A0F5C007FC908 /* LocationManager.swift */,
 				CE8FA3CB2A4A23E5007FC908 /* MapManager.swift */,
+				CE37D7BF2A57466900E89AAB /* FirebaseManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -132,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB751722A4B0ACB0044709E /* MapViewVodel.swift */,
+				CE1756742A572B7D000F90C2 /* TipsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -139,6 +160,7 @@
 		CE8FA3C92A4A23A3007FC908 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CE1756762A572B93000F90C2 /* ArticleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -146,7 +168,7 @@
 		CE8FA3CA2A4A23AB007FC908 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CE8FA3B22A4A0AC1007FC908 /* MapViewController.swift */,
+				CE1756712A572B3C000F90C2 /* Controllers */,
 				CE5121A82A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift */,
 				CE664D312A5362B500972046 /* CustomTabBar.swift */,
 			);
@@ -269,6 +291,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1756752A572B7D000F90C2 /* TipsViewModel.swift in Sources */,
+				CE1756772A572B93000F90C2 /* ArticleModel.swift in Sources */,
+				CE1756732A572B64000F90C2 /* TipsViewController.swift in Sources */,
 				CE8FA3B92A4A0AC1007FC908 /* VetMap.xcdatamodeld in Sources */,
 				CE8FA3B32A4A0AC1007FC908 /* MapViewController.swift in Sources */,
 				CEB751732A4B0ACB0044709E /* MapViewVodel.swift in Sources */,
@@ -277,6 +302,7 @@
 				CE8FA3AF2A4A0AC1007FC908 /* AppDelegate.swift in Sources */,
 				CE8FA3CC2A4A23E5007FC908 /* MapManager.swift in Sources */,
 				CE5121AB2A505C3B00C5B7E7 /*  UIViewController+ adjustLargeTitleSize().swift in Sources */,
+				CE37D7C02A57466900E89AAB /* FirebaseManager.swift in Sources */,
 				CE5121A92A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift in Sources */,
 				CE8FA3B12A4A0AC1007FC908 /* SceneDelegate.swift in Sources */,
 			);
@@ -346,6 +372,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -400,6 +427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

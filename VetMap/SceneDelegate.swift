@@ -26,8 +26,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return vetsViewController
         }()
         
-        let tipsViewController: UIViewController = {
-            let tipsViewController = UIViewController()
+        let tipsViewController: TipsViewController = {
+            let tipsViewController = TipsViewController()
             tipsViewController.view.backgroundColor = .white
             tipsViewController.title = "Tips"
             tipsViewController.tabBarItem.image = UIImage(systemName: "lightbulb")
@@ -44,7 +44,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         
         let vetsNavigationController = UINavigationController(rootViewController: vetsViewController)
-//        vetsNavigationController.navigationBar.prefersLargeTitles = true
         vetsNavigationController.navigationItem.largeTitleDisplayMode = .always
         
         let tipsNavigationController = UINavigationController(rootViewController: tipsViewController)
