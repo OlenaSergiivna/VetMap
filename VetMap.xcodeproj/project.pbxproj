@@ -41,7 +41,7 @@
 		CE8FA3C62A4A0F5C007FC908 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		CE8FA3CB2A4A23E5007FC908 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		CEB751722A4B0ACB0044709E /* MapViewVodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewVodel.swift; sourceTree = "<group>"; };
-		CEF6B1602A4CA39C00A0E1FB /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		CEF6B1602A4CA39C00A0E1FB /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +103,7 @@
 		CE8FA3AD2A4A0AC1007FC908 /* VetMap */ = {
 			isa = PBXGroup;
 			children = (
+				CE17567A2A573D34000F90C2 /* GoogleService-Info.plist */,
 				CE8FA3C92A4A23A3007FC908 /* Model */,
 				CE8FA3CA2A4A23AB007FC908 /* View */,
 				CE8FA3C82A4A2397007FC908 /* ViewModel */,
@@ -163,7 +164,7 @@
 				CE8FA3A72A4A0AC1007FC908 /* Sources */,
 				CE8FA3A82A4A0AC1007FC908 /* Frameworks */,
 				CE8FA3A92A4A0AC1007FC908 /* Resources */,
-				9C897F821453E03A7FAC2905 /* [CP] Embed Pods Frameworks */,
+				70CF16357EA0A941A86A1298 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -215,12 +216,30 @@
 				CE8FA3BE2A4A0AC4007FC908 /* LaunchScreen.storyboard in Resources */,
 				CE8FA3BB2A4A0AC4007FC908 /* Assets.xcassets in Resources */,
 				CEF6B1612A4CA39C00A0E1FB /* Podfile in Resources */,
+				CE17567B2A573D34000F90C2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		70CF16357EA0A941A86A1298 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VetMap/Pods-VetMap-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VetMap/Pods-VetMap-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VetMap/Pods-VetMap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		902A1DF415CDDA5F9CA2E788 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -241,23 +260,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9C897F821453E03A7FAC2905 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VetMap/Pods-VetMap-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VetMap/Pods-VetMap-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VetMap/Pods-VetMap-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -419,10 +421,10 @@
 				DEVELOPMENT_TEAM = T999GJYMD3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VetMap/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VetMap;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
@@ -450,10 +452,10 @@
 				DEVELOPMENT_TEAM = T999GJYMD3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VetMap/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VetMap;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
