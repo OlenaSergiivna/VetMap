@@ -25,6 +25,7 @@
 		CE8FA3C72A4A0F5C007FC908 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA3C62A4A0F5C007FC908 /* LocationManager.swift */; };
 		CE8FA3CC2A4A23E5007FC908 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA3CB2A4A23E5007FC908 /* MapManager.swift */; };
 		CEB751732A4B0ACB0044709E /* MapViewVodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB751722A4B0ACB0044709E /* MapViewVodel.swift */; };
+		CEE4EFB62A597FC90027A19A /* TipsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4EFB52A597FC90027A19A /* TipsTableViewCell.swift */; };
 		CEF6B1612A4CA39C00A0E1FB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CEF6B1602A4CA39C00A0E1FB /* Podfile */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		CE8FA3C62A4A0F5C007FC908 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		CE8FA3CB2A4A23E5007FC908 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		CEB751722A4B0ACB0044709E /* MapViewVodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewVodel.swift; sourceTree = "<group>"; };
+		CEE4EFB52A597FC90027A19A /* TipsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsTableViewCell.swift; sourceTree = "<group>"; };
 		CEF6B1602A4CA39C00A0E1FB /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
@@ -171,6 +173,7 @@
 				CE1756712A572B3C000F90C2 /* Controllers */,
 				CE5121A82A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift */,
 				CE664D312A5362B500972046 /* CustomTabBar.swift */,
+				CEE4EFB52A597FC90027A19A /* TipsTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			files = (
 				CE1756752A572B7D000F90C2 /* TipsViewModel.swift in Sources */,
 				CE1756772A572B93000F90C2 /* ArticleModel.swift in Sources */,
+				CEE4EFB62A597FC90027A19A /* TipsTableViewCell.swift in Sources */,
 				CE1756732A572B64000F90C2 /* TipsViewController.swift in Sources */,
 				CE8FA3B92A4A0AC1007FC908 /* VetMap.xcdatamodeld in Sources */,
 				CE8FA3B32A4A0AC1007FC908 /* MapViewController.swift in Sources */,
