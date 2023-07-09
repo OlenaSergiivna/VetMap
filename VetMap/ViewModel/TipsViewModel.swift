@@ -12,6 +12,8 @@ class TipsViewModel {
     
     var articles = Observable<[Article]>([])
     
+    var articleImage = Observable<UIImage>(UIImage())
+    
     func fetchArticles() {
         FirebaseManager.shared.getDataFromDatabase(for: "Tips") { result in
             
@@ -25,4 +27,9 @@ class TipsViewModel {
             }
         }
     }
+    
+    func setImage(by imagePath: String, for image: UIImageView, withCornerRadius cornerRadius: CGFloat = 0) {
+        ImagesManager.shared.setImage(imagePath: imagePath, setFor: image, cornerRadius: cornerRadius)
+    }
+    
 }

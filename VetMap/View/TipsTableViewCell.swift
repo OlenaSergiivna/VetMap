@@ -21,14 +21,14 @@ class TipsTableViewCell: UITableViewCell {
         let titleLabel = UILabel()
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.numberOfLines = 1
-        titleLabel.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+        titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         return titleLabel
     }()
     
     let mainTextLabel: UILabel = {
         let mainTextLabel = UILabel()
         mainTextLabel.translatesAutoresizingMaskIntoConstraints = false
-        mainTextLabel.numberOfLines = 5
+        mainTextLabel.numberOfLines = 3
         mainTextLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         return mainTextLabel
     }()
@@ -36,8 +36,9 @@ class TipsTableViewCell: UITableViewCell {
     let articleImageView: UIImageView = {
         let articleImageView = UIImageView()
         articleImageView.translatesAutoresizingMaskIntoConstraints = false
-        articleImageView.backgroundColor = .systemTeal
+        articleImageView.backgroundColor = .white
         articleImageView.layer.cornerRadius = 10
+        articleImageView.contentMode = .scaleToFill
         return articleImageView
     }()
     
@@ -76,7 +77,7 @@ class TipsTableViewCell: UITableViewCell {
             articleImageView.topAnchor.constraint(equalTo: bottomView.topAnchor, constant: 16),
             articleImageView.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16),
             articleImageView.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
-            articleImageView.heightAnchor.constraint(equalToConstant: 150),
+            articleImageView.heightAnchor.constraint(equalToConstant: 200),
             
             titleLabel.topAnchor.constraint(equalTo: articleImageView.bottomAnchor, constant: 8),
             titleLabel.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16),

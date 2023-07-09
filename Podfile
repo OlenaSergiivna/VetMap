@@ -6,6 +6,7 @@ target 'VetMap' do
   pod 'Bond'
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'Kingfisher'
 
 end
 

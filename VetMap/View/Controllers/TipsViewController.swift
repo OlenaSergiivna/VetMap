@@ -31,6 +31,7 @@ class TipsViewController: UIViewController {
             cell.titleLabel.text = item.title
             cell.mainTextLabel.text = item.text
             cell.selectionStyle = .none
+            self.tipsViewModel.setImage(by: item.images.item(at: 0), for: cell.articleImageView, withCornerRadius: 10)
             return cell
         }
         

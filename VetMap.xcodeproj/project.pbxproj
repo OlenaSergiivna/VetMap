@@ -26,6 +26,7 @@
 		CE8FA3CC2A4A23E5007FC908 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA3CB2A4A23E5007FC908 /* MapManager.swift */; };
 		CEB751732A4B0ACB0044709E /* MapViewVodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB751722A4B0ACB0044709E /* MapViewVodel.swift */; };
 		CEE4EFB62A597FC90027A19A /* TipsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4EFB52A597FC90027A19A /* TipsTableViewCell.swift */; };
+		CEE4EFB82A599ECA0027A19A /* ImagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4EFB72A599ECA0027A19A /* ImagesManager.swift */; };
 		CEF6B1612A4CA39C00A0E1FB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CEF6B1602A4CA39C00A0E1FB /* Podfile */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		CE8FA3CB2A4A23E5007FC908 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		CEB751722A4B0ACB0044709E /* MapViewVodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewVodel.swift; sourceTree = "<group>"; };
 		CEE4EFB52A597FC90027A19A /* TipsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsTableViewCell.swift; sourceTree = "<group>"; };
+		CEE4EFB72A599ECA0027A19A /* ImagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesManager.swift; sourceTree = "<group>"; };
 		CEF6B1602A4CA39C00A0E1FB /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
@@ -146,6 +148,7 @@
 				CE8FA3C62A4A0F5C007FC908 /* LocationManager.swift */,
 				CE8FA3CB2A4A23E5007FC908 /* MapManager.swift */,
 				CE37D7BF2A57466900E89AAB /* FirebaseManager.swift */,
+				CEE4EFB72A599ECA0027A19A /* ImagesManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				CE37D7C02A57466900E89AAB /* FirebaseManager.swift in Sources */,
 				CE5121A92A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift in Sources */,
 				CE8FA3B12A4A0AC1007FC908 /* SceneDelegate.swift in Sources */,
+				CEE4EFB82A599ECA0027A19A /* ImagesManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
