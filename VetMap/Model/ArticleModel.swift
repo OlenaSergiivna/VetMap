@@ -14,8 +14,15 @@ struct ArticleResults: Codable {
 
 
 struct Article: Codable {
+    let publicationDate: String
     let title: String
     let text: String
     let videos: [String]
     let images: [String]
+    let gifs: [String]
+    
+    enum CodingKeys: String, CodingKey {
+        case publicationDate = "publication_date"
+        case title, text, videos, images, gifs
+    }
 }

@@ -17,22 +17,6 @@ class TipsTableViewCell: UITableViewCell {
         return bottomView
     }()
     
-    let titleLabel: UILabel = {
-        let titleLabel = UILabel()
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.numberOfLines = 1
-        titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
-        return titleLabel
-    }()
-    
-    let mainTextLabel: UILabel = {
-        let mainTextLabel = UILabel()
-        mainTextLabel.translatesAutoresizingMaskIntoConstraints = false
-        mainTextLabel.numberOfLines = 3
-        mainTextLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-        return mainTextLabel
-    }()
-    
     let articleImageView: UIImageView = {
         let articleImageView = UIImageView()
         articleImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -42,6 +26,33 @@ class TipsTableViewCell: UITableViewCell {
         return articleImageView
     }()
     
+    let titleLabel: UILabel = {
+        let titleLabel = UILabel()
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.numberOfLines = 1
+        titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        return titleLabel
+    }()
+    
+    let dateLabel: UILabel = {
+        let dateLabel = UILabel()
+        dateLabel.translatesAutoresizingMaskIntoConstraints = false
+        dateLabel.numberOfLines = 1
+        dateLabel.font = UIFont.systemFont(ofSize: 12, weight: .light)
+        dateLabel.contentMode = .left
+        dateLabel.text = ""
+        return dateLabel
+    }()
+    
+    let mainTextLabel: UILabel = {
+        let mainTextLabel = UILabel()
+        mainTextLabel.translatesAutoresizingMaskIntoConstraints = false
+        mainTextLabel.numberOfLines = 3
+        mainTextLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        return mainTextLabel
+    }()
+
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -50,6 +61,7 @@ class TipsTableViewCell: UITableViewCell {
         contentView.addSubview(bottomView)
         bottomView.addSubview(articleImageView)
         bottomView.addSubview(titleLabel)
+        bottomView.addSubview(dateLabel)
         bottomView.addSubview(mainTextLabel)
         
         setupConstraints()
@@ -83,7 +95,11 @@ class TipsTableViewCell: UITableViewCell {
             titleLabel.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16),
             titleLabel.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
             
-            mainTextLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
+            dateLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
+            dateLabel.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16),
+            dateLabel.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
+            
+            mainTextLabel.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 8),
             mainTextLabel.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 16),
             mainTextLabel.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -16),
             mainTextLabel.bottomAnchor.constraint(equalTo: bottomView.bottomAnchor, constant: -16)

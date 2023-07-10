@@ -32,6 +32,12 @@ class TipsViewController: UIViewController {
             cell.mainTextLabel.text = item.text
             cell.selectionStyle = .none
             self.tipsViewModel.setImage(by: item.images.item(at: 0), for: cell.articleImageView, withCornerRadius: 10)
+            
+            let publicationDateResult = self.tipsViewModel.getPublicationDate(for: item.publicationDate)
+            if case .success(let formattedDate) = publicationDateResult {
+                cell.dateLabel.text = formattedDate
+            }
+            
             return cell
         }
         

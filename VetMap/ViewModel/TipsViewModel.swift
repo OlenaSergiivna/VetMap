@@ -12,8 +12,6 @@ class TipsViewModel {
     
     var articles = Observable<[Article]>([])
     
-    var articleImage = Observable<UIImage>(UIImage())
-    
     func fetchArticles() {
         FirebaseManager.shared.getDataFromDatabase(for: "Tips") { result in
             
@@ -28,8 +26,24 @@ class TipsViewModel {
         }
     }
     
+    
     func setImage(by imagePath: String, for image: UIImageView, withCornerRadius cornerRadius: CGFloat = 0) {
         ImagesManager.shared.setImage(imagePath: imagePath, setFor: image, cornerRadius: cornerRadius)
     }
     
+    
+    func getPublicationDate(for date: String) -> Result<String, Error> {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US")
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        
+        guard let initialDate = dateFormatter.date(from: date) else {
+            return .failure(GeneralErrors.failedWhenFormattingInitialDate)
+        }
+        
+        dateFormatter.dateFormat = "dd MMMM yyyy"
+        let formattedDate = dateFormatter.string(from: initialDate)
+        
+        return .success(formattedDate)
+    }
 }
