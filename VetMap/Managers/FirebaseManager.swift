@@ -17,9 +17,8 @@ struct FirebaseManager {
     private let database = Database.database().reference()
     
     
-    func getDataFromDatabase(for key: String, page: Int? = 0, completion: @escaping(Result<[Article], Error>) -> Void) {
-        
-        let query = database.child(key).queryOrdered(byChild: "page").queryEqual(toValue: 0)
+    func getData(for key: FirebaseKeys, page: Int? = 0, completion: @escaping(Result<[Article], Error>) -> Void) {
+        let query = database.child(key.rawValue).queryOrdered(byChild: "page").queryEqual(toValue: 0)
         query.observeSingleEvent(of: .value) { snapshot, _ in
            
             guard snapshot.exists() else {
@@ -28,7 +27,7 @@ struct FirebaseManager {
             }
 
             do {
-                let data = snapshot.value 
+                let data = snapshot.value
                 let jsonData = try JSONSerialization.data(withJSONObject: data)
                 let decoder = JSONDecoder()
                 let dataDecoded = try decoder.decode([ArticleResults].self, from: jsonData)
@@ -39,4 +38,9 @@ struct FirebaseManager {
             }
         }
     }
+}
+
+
+enum FirebaseKeys: String {
+    case tips = "Tips"
 }

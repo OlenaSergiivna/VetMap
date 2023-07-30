@@ -22,7 +22,7 @@ class TipsViewController: UIViewController {
         
         setupTableView()
         
-        tipsViewModel.fetchArticles()
+        tipsViewModel.updateArticles()
         
         tipsViewModel.articles.bind(to: tipsTableView) { dataSource, indexPath, tableView in
             

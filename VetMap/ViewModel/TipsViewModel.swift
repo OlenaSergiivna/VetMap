@@ -10,16 +10,17 @@ import Bond
 
 class TipsViewModel {
     
+    let databaseManager = DatabaseManager()
+    
     var articles = Observable<[Article]>([])
     
-    func fetchArticles() {
-        FirebaseManager.shared.getDataFromDatabase(for: "Tips") { result in
+    func updateArticles() {
+        
+        databaseManager.getUpdatedArticles { results in
             
-            switch result {
-                
+            switch results {
             case .success(let articles):
                 self.articles.value = articles
-                
             case .failure(let error):
                 print("Error: \(error.localizedDescription)")
             }

@@ -9,4 +9,5 @@ import Foundation
 
 enum GeneralErrors: Error {
     case failedWhenFormattingInitialDate
+    case cantGetAllArticlesFromDatabase
 }

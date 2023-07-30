@@ -26,3 +26,17 @@ struct Article: Codable {
         case title, text, videos, images, gifs
     }
 }
+
+
+extension Article {
+    
+    init(from articleEntity: ArticleEntity) {
+        
+        self.publicationDate = articleEntity.publicationDate ?? ""
+        self.title = articleEntity.title ?? ""
+        self.text = articleEntity.text ?? ""
+        self.images = articleEntity.images ?? []
+        self.videos = articleEntity.videos ?? []
+        self.gifs = articleEntity.gifs ?? []
+    }
+}
