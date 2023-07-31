@@ -24,45 +24,47 @@ class ArticleEntity: NSManagedObject {
     }
     
     
-    class func createInDB(article: Article, context: NSManagedObjectContext) throws {
-        
-        let fetchRequest: NSFetchRequest<ArticleEntity> = ArticleEntity.fetchRequest()
-           fetchRequest.predicate = NSPredicate(format: "title == %@", article.title)
-           let existingArticles = try context.fetch(fetchRequest)
-        
-        let articleEntity = ArticleEntity(context: context)
-        articleEntity.publicationDate = article.publicationDate
-        articleEntity.title = article.title
-        articleEntity.text = article.text
-        articleEntity.images = article.images
-        articleEntity.videos = article.videos
-        articleEntity.gifs = article.gifs
-        
-        do {
-            try context.save()
-        } catch {
-           throw error
-        }
+    class func createArticle(article: Article, context: NSManagedObjectContext) -> ArticleEntity {
+        let articleEntity = ArticleEntity(from: article, context: context)
+        return articleEntity
     }
     
     
-    class func deleteAll(context: NSManagedObjectContext) {
-       
+    class func deleteArticle(article entity: ArticleEntity, context: NSManagedObjectContext) {
+        context.delete(entity)
+    }
+    
+    
+    class func deleteAllArticles(context: NSManagedObjectContext) {
+        
         let request: NSFetchRequest<ArticleEntity> = ArticleEntity.fetchRequest()
         request.includesPropertyValues = true
         
         do {
             let items = try context.fetch(request)
-
+            
             for item in items {
                 context.delete(item)
             }
-
+            
             try context.save()
-
+            
         } catch let error {
             print(error.localizedDescription)
         }
     }
 }
 
+
+extension ArticleEntity {
+    
+    convenience init(from article: Article, context: NSManagedObjectContext) {
+        self.init(context: context)
+        publicationDate = article.publicationDate
+        title = article.title
+        text = article.text
+        images = article.images
+        videos = article.videos
+        gifs = article.gifs
+    }
+}

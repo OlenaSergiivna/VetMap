@@ -48,13 +48,9 @@ struct DatabaseManager {
             case .success(let remoteArticles):
                 
                 for article in remoteArticles {
-                    do {
-                        // Update or create
-                        try ArticleEntity.createInDB(article: article, context: context)
-                        
-                    } catch let error {
-                        completion(.failure(error))
-                    }
+                    
+                    // Update or create
+                    let _ = ArticleEntity.createArticle(article: article, context: context)
                 }
                 
                 // Delete
@@ -62,7 +58,7 @@ struct DatabaseManager {
                 
                 localArticles.forEach { localArticle in
                     if let title = localArticle.title,!remoteArticleTitles.contains(title) {
-                        context.delete(localArticle)
+                        ArticleEntity.deleteArticle(article: localArticle, context: context)
                     }
                 }
                 
@@ -74,7 +70,6 @@ struct DatabaseManager {
                     completion(.failure(error))
                 }
                 
-
             case .failure(let error):
                 completion(.failure(error))
             }

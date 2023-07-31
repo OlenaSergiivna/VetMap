@@ -27,7 +27,7 @@
 		CE8FA3C72A4A0F5C007FC908 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA3C62A4A0F5C007FC908 /* LocationManager.swift */; };
 		CE8FA3CC2A4A23E5007FC908 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA3CB2A4A23E5007FC908 /* MapManager.swift */; };
 		CEB751732A4B0ACB0044709E /* MapViewVodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB751722A4B0ACB0044709E /* MapViewVodel.swift */; };
-		CEE31E342A6476B700F6E4A0 /* DatabaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31E332A6476B700F6E4A0 /* DatabaseModels.swift */; };
+		CEE31E342A6476B700F6E4A0 /* ArticleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31E332A6476B700F6E4A0 /* ArticleEntity.swift */; };
 		CEE4EFB62A597FC90027A19A /* TipsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4EFB52A597FC90027A19A /* TipsTableViewCell.swift */; };
 		CEE4EFB82A599ECA0027A19A /* ImagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4EFB72A599ECA0027A19A /* ImagesManager.swift */; };
 		CEF6B1612A4CA39C00A0E1FB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CEF6B1602A4CA39C00A0E1FB /* Podfile */; };
@@ -58,7 +58,7 @@
 		CE8FA3C62A4A0F5C007FC908 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		CE8FA3CB2A4A23E5007FC908 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		CEB751722A4B0ACB0044709E /* MapViewVodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewVodel.swift; sourceTree = "<group>"; };
-		CEE31E332A6476B700F6E4A0 /* DatabaseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseModels.swift; sourceTree = "<group>"; };
+		CEE31E332A6476B700F6E4A0 /* ArticleEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleEntity.swift; sourceTree = "<group>"; };
 		CEE4EFB52A597FC90027A19A /* TipsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsTableViewCell.swift; sourceTree = "<group>"; };
 		CEE4EFB72A599ECA0027A19A /* ImagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesManager.swift; sourceTree = "<group>"; };
 		CEF6B1602A4CA39C00A0E1FB /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -173,8 +173,8 @@
 		CE8FA3C92A4A23A3007FC908 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CEE31E352A6476C000F6E4A0 /* DatabaseModels */,
 				CE1756762A572B93000F90C2 /* ArticleModels.swift */,
+				CEE31E352A6476C000F6E4A0 /* DatabaseModels */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,7 +193,7 @@
 		CEE31E352A6476C000F6E4A0 /* DatabaseModels */ = {
 			isa = PBXGroup;
 			children = (
-				CEE31E332A6476B700F6E4A0 /* DatabaseModels.swift */,
+				CEE31E332A6476B700F6E4A0 /* ArticleEntity.swift */,
 			);
 			path = DatabaseModels;
 			sourceTree = "<group>";
@@ -216,6 +216,8 @@
 			dependencies = (
 			);
 			name = VetMap;
+			packageProductDependencies = (
+			);
 			productName = VetMap;
 			productReference = CE8FA3AB2A4A0AC1007FC908 /* VetMap.app */;
 			productType = "com.apple.product-type.application";
@@ -244,6 +246,8 @@
 				Base,
 			);
 			mainGroup = CE8FA3A22A4A0AC1007FC908;
+			packageReferences = (
+			);
 			productRefGroup = CE8FA3AC2A4A0AC1007FC908 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -317,7 +321,7 @@
 				CE1756752A572B7D000F90C2 /* TipsViewModel.swift in Sources */,
 				CE1756772A572B93000F90C2 /* ArticleModels.swift in Sources */,
 				CEE4EFB62A597FC90027A19A /* TipsTableViewCell.swift in Sources */,
-				CEE31E342A6476B700F6E4A0 /* DatabaseModels.swift in Sources */,
+				CEE31E342A6476B700F6E4A0 /* ArticleEntity.swift in Sources */,
 				CE1756732A572B64000F90C2 /* TipsViewController.swift in Sources */,
 				CE8FA3B92A4A0AC1007FC908 /* VetMap.xcdatamodeld in Sources */,
 				CE8FA3B32A4A0AC1007FC908 /* MapViewController.swift in Sources */,

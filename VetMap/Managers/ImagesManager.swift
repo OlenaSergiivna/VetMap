@@ -30,13 +30,13 @@ struct ImagesManager {
             ])
         {
             result in
-            switch result {
-            case .success(let value):
-                print("Task done for: \(value.source.url?.absoluteString ?? "")")
-            case .failure(let error):
-                print("Task failed: \(error.localizedDescription)")
-
-            }
+//            switch result {
+//            case .success(let value):
+//                print("Task done for: \(value.source.url?.absoluteString ?? "")")
+//            case .failure(let error):
+//                print("Task failed: \(error.localizedDescription)")
+//
+//            }
         }
     }
     
