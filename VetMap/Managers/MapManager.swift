@@ -8,11 +8,7 @@
 import Foundation
 import MapKit
 
-class MapManager {
-    
-    static let shared = MapManager()
-    
-    private init() {}
+class MapManager: MapManagerProtocol {
     
     func createMapPin(with location: CLLocation, completion: @escaping(MKPointAnnotation?) -> Void) {
         

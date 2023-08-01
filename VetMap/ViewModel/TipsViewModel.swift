@@ -10,7 +10,8 @@ import Bond
 
 class TipsViewModel {
     
-    let databaseManager = DatabaseManager()
+    @Injected var databaseManager: DatabaseManagerProtocol
+    @Injected var imagesManager: ImagesManagerProtocol
     
     var articles = Observable<[Article]>([])
     
@@ -29,7 +30,7 @@ class TipsViewModel {
     
     
     func setImage(by imagePath: String, for image: UIImageView, withCornerRadius cornerRadius: CGFloat = 0) {
-        ImagesManager.shared.setImage(imagePath: imagePath, setFor: image, cornerRadius: cornerRadius)
+        imagesManager.setImage(imagePath: imagePath, setFor: image, cornerRadius: cornerRadius)
     }
     
     

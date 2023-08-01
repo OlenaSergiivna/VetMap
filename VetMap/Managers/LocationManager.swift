@@ -8,9 +8,7 @@
 import Foundation
 import CoreLocation
 
-class LocationManager: NSObject, CLLocationManagerDelegate {
-    
-    static let shared = LocationManager()
+class LocationManager: NSObject, CLLocationManagerDelegate, LocationManagerProtocol {
     
     let manager = CLLocationManager()
     

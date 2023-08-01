@@ -8,7 +8,9 @@
 import Foundation
 import CoreData
 
-struct DatabaseManager {
+struct DatabaseManager: DatabaseManagerProtocol {
+    
+    @Injected var firebaseManager: FirebaseManagerProtocol
     
     let context = AppDelegate.viewContext
     
@@ -34,14 +36,14 @@ struct DatabaseManager {
     }
     
     
-    func syncLocalArticleEntitiesWithServer(completion: @escaping  (Result<Bool, Error>) -> Void) {
+    private func syncLocalArticleEntitiesWithServer(completion: @escaping  (Result<Bool, Error>) -> Void) {
         
         guard let localArticles = try? ArticleEntity.getAllArticlesFromDB(context: context) else {
             completion(.failure(GeneralErrors.cantGetAllArticlesFromDatabase))
             return
         }
         
-        FirebaseManager.shared.getData(for: .tips) { result in
+        firebaseManager.getData(for: .tips, page: 0) { result in
             
             switch result {
                 

@@ -12,6 +12,13 @@
 		CE1756752A572B7D000F90C2 /* TipsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1756742A572B7D000F90C2 /* TipsViewModel.swift */; };
 		CE1756772A572B93000F90C2 /* ArticleModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1756762A572B93000F90C2 /* ArticleModels.swift */; };
 		CE17567B2A573D34000F90C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE17567A2A573D34000F90C2 /* GoogleService-Info.plist */; };
+		CE24CCA92A785AA4000F62CE /* InjectionClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CCA82A785AA4000F62CE /* InjectionClass.swift */; };
+		CE24CCAB2A785AB2000F62CE /* @Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CCAA2A785AB2000F62CE /* @Injected.swift */; };
+		CE24CCAE2A785BA4000F62CE /* DatabaseManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CCAD2A785BA4000F62CE /* DatabaseManagerProtocol.swift */; };
+		CE24CCB02A785E6F000F62CE /* ImagesManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CCAF2A785E6F000F62CE /* ImagesManagerProtocol.swift */; };
+		CE24CCB22A78681A000F62CE /* FirebaseManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CCB12A78681A000F62CE /* FirebaseManagerProtocol.swift */; };
+		CE24CCB42A786B03000F62CE /* MapManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CCB32A786B03000F62CE /* MapManagerProtocol.swift */; };
+		CE24CCB82A786D2A000F62CE /* LocationManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CCB72A786D2A000F62CE /* LocationManagerProtocol.swift */; };
 		CE37D7C02A57466900E89AAB /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE37D7BF2A57466900E89AAB /* FirebaseManager.swift */; };
 		CE5121A92A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5121A82A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift */; };
 		CE5121AB2A505C3B00C5B7E7 /*  UIViewController+ adjustLargeTitleSize().swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5121AA2A505C3B00C5B7E7 /*  UIViewController+ adjustLargeTitleSize().swift */; };
@@ -41,6 +48,13 @@
 		CE1756742A572B7D000F90C2 /* TipsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewModel.swift; sourceTree = "<group>"; };
 		CE1756762A572B93000F90C2 /* ArticleModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModels.swift; sourceTree = "<group>"; };
 		CE17567A2A573D34000F90C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE24CCA82A785AA4000F62CE /* InjectionClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionClass.swift; sourceTree = "<group>"; };
+		CE24CCAA2A785AB2000F62CE /* @Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "@Injected.swift"; sourceTree = "<group>"; };
+		CE24CCAD2A785BA4000F62CE /* DatabaseManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManagerProtocol.swift; sourceTree = "<group>"; };
+		CE24CCAF2A785E6F000F62CE /* ImagesManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesManagerProtocol.swift; sourceTree = "<group>"; };
+		CE24CCB12A78681A000F62CE /* FirebaseManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManagerProtocol.swift; sourceTree = "<group>"; };
+		CE24CCB32A786B03000F62CE /* MapManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManagerProtocol.swift; sourceTree = "<group>"; };
+		CE24CCB72A786D2A000F62CE /* LocationManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerProtocol.swift; sourceTree = "<group>"; };
 		CE37D7BF2A57466900E89AAB /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		CE5121A82A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarkerAnnotationView.swift; sourceTree = "<group>"; };
 		CE5121AA2A505C3B00C5B7E7 /*  UIViewController+ adjustLargeTitleSize().swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " UIViewController+ adjustLargeTitleSize().swift"; sourceTree = "<group>"; };
@@ -102,6 +116,27 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		CE24CCA72A7859E3000F62CE /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				CE24CCA82A785AA4000F62CE /* InjectionClass.swift */,
+				CE24CCAA2A785AB2000F62CE /* @Injected.swift */,
+			);
+			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
+		CE24CCAC2A785B68000F62CE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CE24CCB72A786D2A000F62CE /* LocationManagerProtocol.swift */,
+				CE24CCB32A786B03000F62CE /* MapManagerProtocol.swift */,
+				CE24CCB12A78681A000F62CE /* FirebaseManagerProtocol.swift */,
+				CE24CCAF2A785E6F000F62CE /* ImagesManagerProtocol.swift */,
+				CE24CCAD2A785BA4000F62CE /* DatabaseManagerProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		CE5121AC2A505C4100C5B7E7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,7 +167,7 @@
 		CE8FA3AD2A4A0AC1007FC908 /* VetMap */ = {
 			isa = PBXGroup;
 			children = (
-				CE17567A2A573D34000F90C2 /* GoogleService-Info.plist */,
+				CE24CCA72A7859E3000F62CE /* DependencyInjection */,
 				CE8FA3C92A4A23A3007FC908 /* Model */,
 				CE8FA3CA2A4A23AB007FC908 /* View */,
 				CE8FA3C82A4A2397007FC908 /* ViewModel */,
@@ -141,6 +176,7 @@
 				CE8FA3AE2A4A0AC1007FC908 /* AppDelegate.swift */,
 				CE8FA3B02A4A0AC1007FC908 /* SceneDelegate.swift */,
 				CE8FA3BC2A4A0AC4007FC908 /* LaunchScreen.storyboard */,
+				CE17567A2A573D34000F90C2 /* GoogleService-Info.plist */,
 				CE8FA3BA2A4A0AC4007FC908 /* Assets.xcassets */,
 				CE8FA3BF2A4A0AC4007FC908 /* Info.plist */,
 				CE8FA3B72A4A0AC1007FC908 /* VetMap.xcdatamodeld */,
@@ -152,6 +188,7 @@
 		CE8FA3C52A4A0F45007FC908 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				CE24CCAC2A785B68000F62CE /* Protocols */,
 				CE8FA3C62A4A0F5C007FC908 /* LocationManager.swift */,
 				CE8FA3CB2A4A23E5007FC908 /* MapManager.swift */,
 				CE37D7BF2A57466900E89AAB /* FirebaseManager.swift */,
@@ -326,16 +363,23 @@
 				CE8FA3B92A4A0AC1007FC908 /* VetMap.xcdatamodeld in Sources */,
 				CE8FA3B32A4A0AC1007FC908 /* MapViewController.swift in Sources */,
 				CE7B3B172A5E0DE7004B8A21 /* DatabaseManager.swift in Sources */,
+				CE24CCB82A786D2A000F62CE /* LocationManagerProtocol.swift in Sources */,
 				CEB751732A4B0ACB0044709E /* MapViewVodel.swift in Sources */,
 				CE664D322A5362B500972046 /* CustomTabBar.swift in Sources */,
 				CE8FA3C72A4A0F5C007FC908 /* LocationManager.swift in Sources */,
 				CE8FA3AF2A4A0AC1007FC908 /* AppDelegate.swift in Sources */,
+				CE24CCA92A785AA4000F62CE /* InjectionClass.swift in Sources */,
+				CE24CCB02A785E6F000F62CE /* ImagesManagerProtocol.swift in Sources */,
+				CE24CCAB2A785AB2000F62CE /* @Injected.swift in Sources */,
+				CE24CCAE2A785BA4000F62CE /* DatabaseManagerProtocol.swift in Sources */,
 				CE8FA3CC2A4A23E5007FC908 /* MapManager.swift in Sources */,
 				CE5121AB2A505C3B00C5B7E7 /*  UIViewController+ adjustLargeTitleSize().swift in Sources */,
 				CE37D7C02A57466900E89AAB /* FirebaseManager.swift in Sources */,
 				CE67DCAC2A5C740A00C73305 /* Errors.swift in Sources */,
 				CE5121A92A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift in Sources */,
+				CE24CCB42A786B03000F62CE /* MapManagerProtocol.swift in Sources */,
 				CE8FA3B12A4A0AC1007FC908 /* SceneDelegate.swift in Sources */,
+				CE24CCB22A78681A000F62CE /* FirebaseManagerProtocol.swift in Sources */,
 				CEE4EFB82A599ECA0027A19A /* ImagesManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,17 +8,12 @@
 import Foundation
 import Firebase
 
-struct FirebaseManager {
-    
-    static let shared = FirebaseManager()
-    
-    private init() {}
+struct FirebaseManager: FirebaseManagerProtocol {
      
     private let database = Database.database().reference()
     
-    
-    func getData(for key: FirebaseKeys, page: Int? = 0, completion: @escaping(Result<[Article], Error>) -> Void) {
-        let query = database.child(key.rawValue).queryOrdered(byChild: "page").queryEqual(toValue: 0)
+    func getData(for key: FirebaseKeys, page: Int, completion: @escaping(Result<[Article], Error>) -> Void) {
+        let query = database.child(key.rawValue).queryOrdered(byChild: "page").queryEqual(toValue: page)
         query.observeSingleEvent(of: .value) { snapshot, _ in
            
             guard snapshot.exists() else {

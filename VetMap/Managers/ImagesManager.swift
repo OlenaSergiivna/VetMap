@@ -8,13 +8,9 @@
 import Foundation
 import Kingfisher
 
-struct ImagesManager {
+struct ImagesManager: ImagesManagerProtocol {
     
-    static let shared = ImagesManager()
-    
-    private init() {}
-    
-    func setImage(imagePath: String, setFor image: UIImageView, size: String = "original", cornerRadius: CGFloat = 0, scaleFactor: CGFloat = UIScreen.main.scale) {
+    func setImage(imagePath: String, setFor image: UIImageView, cornerRadius: CGFloat = 0) {
         
         let processor = DownsamplingImageProcessor(size: CGSize(width: 300, height: 150))
         |> RoundCornerImageProcessor(cornerRadius: cornerRadius)
@@ -24,7 +20,7 @@ struct ImagesManager {
             with: URL(string: imagePath),
             options: [
                 .processor(processor),
-                .scaleFactor(scaleFactor),
+                .scaleFactor(UIScreen.main.scale),
                 .transition(.fade(1)),
                 
             ])
@@ -50,7 +46,7 @@ struct ImagesManager {
     }
     
     
-    func clearCasheKF() {
+    func clearCashe() {
         cashe.memoryStorage.removeAll()
     }
 }

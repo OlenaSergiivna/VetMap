@@ -11,6 +11,10 @@ import Bond
 
 class MapViewModel {
     
+    @Injected var mapManager: MapManagerProtocol
+    
+    @Injected var locationManager: LocationManagerProtocol
+    
     var mapTitle = Observable<String>("")
     
     var mapPin = Observable<MKPointAnnotation>(MKPointAnnotation())
@@ -21,7 +25,7 @@ class MapViewModel {
     
     func fetchMapData() {
         
-        LocationManager.shared.getUserLocation { location in
+        locationManager.getUserLocation { location in
             
             self.createMapPin(location: location)
             
@@ -33,7 +37,7 @@ class MapViewModel {
     
     
     private func createMapPin(location: CLLocation) {
-        MapManager.shared.createMapPin(with: location) { pin in
+        mapManager.createMapPin(with: location) { pin in
             guard let pin else { return }
             self.mapPin.value = pin
         }
@@ -48,7 +52,7 @@ class MapViewModel {
     
     private func getLocationName(location: CLLocation) {
         
-        LocationManager.shared.getLocationName(with: location) { locationName in
+        locationManager.getLocationName(with: location) { locationName in
             guard let locationName else { return }
             
             self.mapTitle.value = locationName
@@ -58,7 +62,7 @@ class MapViewModel {
     
     func getVetsAnnotations(for region: MKCoordinateRegion) {
         
-        MapManager.shared.searchVeterinaryClinics(for: region) { vets in
+        mapManager.searchVeterinaryClinics(for: region) { vets in
             
             var annotations = [MKPointAnnotation]()
             
@@ -77,8 +81,8 @@ class MapViewModel {
     
     func buildARoute(targetLocation: CLLocationCoordinate2D, completion: @escaping([MKRoute]) -> Void) {
         
-        LocationManager.shared.getUserLocation { location in
-            MapManager.shared.drawARoute(userLocation: location.coordinate, targetLocation: targetLocation) { result in
+        locationManager.getUserLocation { location in
+            self.mapManager.drawARoute(userLocation: location.coordinate, targetLocation: targetLocation) { result in
                 
                 switch result {
                 case .success(let routes):
