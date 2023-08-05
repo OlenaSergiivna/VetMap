@@ -8,9 +8,13 @@
 import Foundation
 import Firebase
 
-struct FirebaseManager: FirebaseManagerProtocol {
+class FirebaseManager: FirebaseManagerProtocol {
      
     private let database = Database.database().reference()
+    
+    class func configureFirebase() {
+        FirebaseApp.configure()
+    }
     
     func getData(for key: FirebaseKeys, page: Int, completion: @escaping(Result<[Article], Error>) -> Void) {
         let query = database.child(key.rawValue).queryOrdered(byChild: "page").queryEqual(toValue: page)

@@ -23,6 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             vetsViewController.view.backgroundColor = .white
             vetsViewController.title = ""
             vetsViewController.tabBarItem.image = UIImage(systemName: "pawprint")
+            vetsViewController.tabBarItem.title = "Vets"
             return vetsViewController
         }()
         
@@ -31,14 +32,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             tipsViewController.view.backgroundColor = .white
             tipsViewController.title = "Tips"
             tipsViewController.tabBarItem.image = UIImage(systemName: "lightbulb")
+            tipsViewController.tabBarItem.title = "Tips"
             return tipsViewController
         }()
         
-        let accountViewController: UIViewController = {
-            let accountViewController = UIViewController()
+        let accountViewController: UserViewController = {
+            let accountViewController = UserViewController()
             accountViewController.view.backgroundColor = .white
-            accountViewController.title = "Account"
             accountViewController.tabBarItem.image = UIImage(systemName: "person")
+            accountViewController.tabBarItem.title = "My Pet"
             return accountViewController
         }()
         
@@ -99,7 +101,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
-
-
 }
 
