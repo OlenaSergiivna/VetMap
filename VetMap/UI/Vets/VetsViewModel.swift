@@ -1,5 +1,5 @@
 //
-//  MapViewVodel.swift
+//  VetsViewModel.swift
 //  VetMap
 //
 //  Created by user on 27.06.2023.
@@ -9,7 +9,7 @@ import Foundation
 import MapKit
 import Bond
 
-class MapViewModel {
+class VetsViewModel {
     
     @Injected var mapManager: MapManagerProtocol
     

@@ -22,18 +22,25 @@
 		CE37D7C02A57466900E89AAB /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE37D7BF2A57466900E89AAB /* FirebaseManager.swift */; };
 		CE5121A92A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5121A82A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift */; };
 		CE5121AB2A505C3B00C5B7E7 /*  UIViewController+ adjustLargeTitleSize().swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5121AA2A505C3B00C5B7E7 /*  UIViewController+ adjustLargeTitleSize().swift */; };
-		CE664D322A5362B500972046 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE664D312A5362B500972046 /* CustomTabBar.swift */; };
+		CE64595C2A7DA8EE009B061A /* AppointmentsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE64595B2A7DA8EE009B061A /* AppointmentsScreenView.swift */; };
+		CE64595E2A7DAC19009B061A /* AppointmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE64595D2A7DAC19009B061A /* AppointmentsViewController.swift */; };
+		CE664D322A5362B500972046 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE664D312A5362B500972046 /* MainTabBarController.swift */; };
 		CE67DCAC2A5C740A00C73305 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67DCAB2A5C740A00C73305 /* Errors.swift */; };
 		CE7B3B172A5E0DE7004B8A21 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B3B162A5E0DE7004B8A21 /* DatabaseManager.swift */; };
 		CE8FA3AF2A4A0AC1007FC908 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA3AE2A4A0AC1007FC908 /* AppDelegate.swift */; };
 		CE8FA3B12A4A0AC1007FC908 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA3B02A4A0AC1007FC908 /* SceneDelegate.swift */; };
-		CE8FA3B32A4A0AC1007FC908 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA3B22A4A0AC1007FC908 /* MapViewController.swift */; };
+		CE8FA3B32A4A0AC1007FC908 /* VetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA3B22A4A0AC1007FC908 /* VetsViewController.swift */; };
 		CE8FA3B92A4A0AC1007FC908 /* VetMap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA3B72A4A0AC1007FC908 /* VetMap.xcdatamodeld */; };
 		CE8FA3BB2A4A0AC4007FC908 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8FA3BA2A4A0AC4007FC908 /* Assets.xcassets */; };
 		CE8FA3BE2A4A0AC4007FC908 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8FA3BC2A4A0AC4007FC908 /* LaunchScreen.storyboard */; };
 		CE8FA3C72A4A0F5C007FC908 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA3C62A4A0F5C007FC908 /* LocationManager.swift */; };
 		CE8FA3CC2A4A23E5007FC908 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA3CB2A4A23E5007FC908 /* MapManager.swift */; };
-		CEB751732A4B0ACB0044709E /* MapViewVodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB751722A4B0ACB0044709E /* MapViewVodel.swift */; };
+		CEB618AF2A81236800CCD5E4 /* AppointmentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB618AE2A81236800CCD5E4 /* AppointmentsViewModel.swift */; };
+		CEB618B62A81264600CCD5E4 /* VetsViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB618B52A81264600CCD5E4 /* VetsViewCoordinator.swift */; };
+		CEB618BD2A812CEA00CCD5E4 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB618BC2A812CEA00CCD5E4 /* CoordinatorProtocol.swift */; };
+		CEB618C92A819C8800CCD5E4 /* AppointmentsViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB618C82A819C8800CCD5E4 /* AppointmentsViewCoordinator.swift */; };
+		CEB618CB2A81A19700CCD5E4 /* TipsViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB618CA2A81A19700CCD5E4 /* TipsViewCoordinator.swift */; };
+		CEB751732A4B0ACB0044709E /* VetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB751722A4B0ACB0044709E /* VetsViewModel.swift */; };
 		CEE31E342A6476B700F6E4A0 /* ArticleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE31E332A6476B700F6E4A0 /* ArticleEntity.swift */; };
 		CEE4EFB62A597FC90027A19A /* TipsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4EFB52A597FC90027A19A /* TipsTableViewCell.swift */; };
 		CEE4EFB82A599ECA0027A19A /* ImagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4EFB72A599ECA0027A19A /* ImagesManager.swift */; };
@@ -58,20 +65,27 @@
 		CE37D7BF2A57466900E89AAB /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		CE5121A82A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarkerAnnotationView.swift; sourceTree = "<group>"; };
 		CE5121AA2A505C3B00C5B7E7 /*  UIViewController+ adjustLargeTitleSize().swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " UIViewController+ adjustLargeTitleSize().swift"; sourceTree = "<group>"; };
-		CE664D312A5362B500972046 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		CE64595B2A7DA8EE009B061A /* AppointmentsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsScreenView.swift; sourceTree = "<group>"; };
+		CE64595D2A7DAC19009B061A /* AppointmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsViewController.swift; sourceTree = "<group>"; };
+		CE664D312A5362B500972046 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		CE67DCAB2A5C740A00C73305 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		CE7B3B162A5E0DE7004B8A21 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		CE8FA3AB2A4A0AC1007FC908 /* VetMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VetMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8FA3AE2A4A0AC1007FC908 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE8FA3B02A4A0AC1007FC908 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE8FA3B22A4A0AC1007FC908 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CE8FA3B22A4A0AC1007FC908 /* VetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetsViewController.swift; sourceTree = "<group>"; };
 		CE8FA3B82A4A0AC1007FC908 /* VetMap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VetMap.xcdatamodel; sourceTree = "<group>"; };
 		CE8FA3BA2A4A0AC4007FC908 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE8FA3BD2A4A0AC4007FC908 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE8FA3BF2A4A0AC4007FC908 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE8FA3C62A4A0F5C007FC908 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		CE8FA3CB2A4A23E5007FC908 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
-		CEB751722A4B0ACB0044709E /* MapViewVodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewVodel.swift; sourceTree = "<group>"; };
+		CEB618AE2A81236800CCD5E4 /* AppointmentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsViewModel.swift; sourceTree = "<group>"; };
+		CEB618B52A81264600CCD5E4 /* VetsViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetsViewCoordinator.swift; sourceTree = "<group>"; };
+		CEB618BC2A812CEA00CCD5E4 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		CEB618C82A819C8800CCD5E4 /* AppointmentsViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsViewCoordinator.swift; sourceTree = "<group>"; };
+		CEB618CA2A81A19700CCD5E4 /* TipsViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewCoordinator.swift; sourceTree = "<group>"; };
+		CEB751722A4B0ACB0044709E /* VetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetsViewModel.swift; sourceTree = "<group>"; };
 		CEE31E332A6476B700F6E4A0 /* ArticleEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleEntity.swift; sourceTree = "<group>"; };
 		CEE4EFB52A597FC90027A19A /* TipsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsTableViewCell.swift; sourceTree = "<group>"; };
 		CEE4EFB72A599ECA0027A19A /* ImagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesManager.swift; sourceTree = "<group>"; };
@@ -107,15 +121,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CE1756712A572B3C000F90C2 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				CE8FA3B22A4A0AC1007FC908 /* MapViewController.swift */,
-				CE1756722A572B64000F90C2 /* TipsViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		CE24CCA72A7859E3000F62CE /* DependencyInjection */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,12 +142,28 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		CE2A62C12A81B3AD00306E2E /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				CEB618BC2A812CEA00CCD5E4 /* CoordinatorProtocol.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
 		CE5121AC2A505C4100C5B7E7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				CE5121AA2A505C3B00C5B7E7 /*  UIViewController+ adjustLargeTitleSize().swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE64595A2A7DA88C009B061A /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				CE64595B2A7DA8EE009B061A /* AppointmentsScreenView.swift */,
+			);
+			path = CustomUI;
 			sourceTree = "<group>";
 		};
 		CE8FA3A22A4A0AC1007FC908 = {
@@ -167,20 +188,16 @@
 		CE8FA3AD2A4A0AC1007FC908 /* VetMap */ = {
 			isa = PBXGroup;
 			children = (
-				CE24CCA72A7859E3000F62CE /* DependencyInjection */,
-				CE8FA3C92A4A23A3007FC908 /* Model */,
-				CE8FA3CA2A4A23AB007FC908 /* View */,
-				CE8FA3C82A4A2397007FC908 /* ViewModel */,
-				CE8FA3C52A4A0F45007FC908 /* Managers */,
-				CE5121AC2A505C4100C5B7E7 /* Extensions */,
 				CE8FA3AE2A4A0AC1007FC908 /* AppDelegate.swift */,
 				CE8FA3B02A4A0AC1007FC908 /* SceneDelegate.swift */,
+				CEB618B02A81239300CCD5E4 /* Bussiness */,
+				CEB618AA2A81227200CCD5E4 /* UI */,
+				CE5121AC2A505C4100C5B7E7 /* Extensions */,
 				CE8FA3BC2A4A0AC4007FC908 /* LaunchScreen.storyboard */,
-				CE17567A2A573D34000F90C2 /* GoogleService-Info.plist */,
 				CE8FA3BA2A4A0AC4007FC908 /* Assets.xcassets */,
+				CE17567A2A573D34000F90C2 /* GoogleService-Info.plist */,
 				CE8FA3BF2A4A0AC4007FC908 /* Info.plist */,
 				CE8FA3B72A4A0AC1007FC908 /* VetMap.xcdatamodeld */,
-				CE67DCAB2A5C740A00C73305 /* Errors.swift */,
 			);
 			path = VetMap;
 			sourceTree = "<group>";
@@ -198,33 +215,101 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		CE8FA3C82A4A2397007FC908 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				CEB751722A4B0ACB0044709E /* MapViewVodel.swift */,
-				CE1756742A572B7D000F90C2 /* TipsViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		CE8FA3C92A4A23A3007FC908 /* Model */ = {
+		CE8FA3C92A4A23A3007FC908 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				CE1756762A572B93000F90C2 /* ArticleModels.swift */,
 				CEE31E352A6476C000F6E4A0 /* DatabaseModels */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		CE8FA3CA2A4A23AB007FC908 /* View */ = {
+		CEB618AA2A81227200CCD5E4 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				CE1756712A572B3C000F90C2 /* Controllers */,
+				CEB618AC2A81231000CCD5E4 /* Vets */,
+				CEB618AB2A8122CE00CCD5E4 /* Appointments */,
+				CEB618AD2A81231900CCD5E4 /* Tips */,
+				CE2A62C12A81B3AD00306E2E /* Coordinators */,
+				CEB618B22A81240A00CCD5E4 /* TabBar */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		CEB618AB2A8122CE00CCD5E4 /* Appointments */ = {
+			isa = PBXGroup;
+			children = (
+				CEB618C82A819C8800CCD5E4 /* AppointmentsViewCoordinator.swift */,
+				CE64595D2A7DAC19009B061A /* AppointmentsViewController.swift */,
+				CEB618AE2A81236800CCD5E4 /* AppointmentsViewModel.swift */,
+				CE64595A2A7DA88C009B061A /* CustomUI */,
+			);
+			path = Appointments;
+			sourceTree = "<group>";
+		};
+		CEB618AC2A81231000CCD5E4 /* Vets */ = {
+			isa = PBXGroup;
+			children = (
+				CEB618B52A81264600CCD5E4 /* VetsViewCoordinator.swift */,
+				CE8FA3B22A4A0AC1007FC908 /* VetsViewController.swift */,
+				CEB751722A4B0ACB0044709E /* VetsViewModel.swift */,
+				CEB618B12A8123E600CCD5E4 /* CustomUI */,
+			);
+			path = Vets;
+			sourceTree = "<group>";
+		};
+		CEB618AD2A81231900CCD5E4 /* Tips */ = {
+			isa = PBXGroup;
+			children = (
+				CEB618CA2A81A19700CCD5E4 /* TipsViewCoordinator.swift */,
+				CE1756722A572B64000F90C2 /* TipsViewController.swift */,
+				CE1756742A572B7D000F90C2 /* TipsViewModel.swift */,
+				CEB618B32A81245500CCD5E4 /* CustomUI */,
+			);
+			path = Tips;
+			sourceTree = "<group>";
+		};
+		CEB618B02A81239300CCD5E4 /* Bussiness */ = {
+			isa = PBXGroup;
+			children = (
+				CE8FA3C52A4A0F45007FC908 /* Managers */,
+				CE8FA3C92A4A23A3007FC908 /* Models */,
+				CE24CCA72A7859E3000F62CE /* DependencyInjection */,
+				CEB618B42A8124A200CCD5E4 /* ErrorHandling */,
+			);
+			path = Bussiness;
+			sourceTree = "<group>";
+		};
+		CEB618B12A8123E600CCD5E4 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
 				CE5121A82A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift */,
-				CE664D312A5362B500972046 /* CustomTabBar.swift */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		CEB618B22A81240A00CCD5E4 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CE664D312A5362B500972046 /* MainTabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		CEB618B32A81245500CCD5E4 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
 				CEE4EFB52A597FC90027A19A /* TipsTableViewCell.swift */,
 			);
-			path = View;
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		CEB618B42A8124A200CCD5E4 /* ErrorHandling */ = {
+			isa = PBXGroup;
+			children = (
+				CE67DCAB2A5C740A00C73305 /* Errors.swift */,
+			);
+			path = ErrorHandling;
 			sourceTree = "<group>";
 		};
 		CEE31E352A6476C000F6E4A0 /* DatabaseModels */ = {
@@ -359,28 +444,35 @@
 				CE1756772A572B93000F90C2 /* ArticleModels.swift in Sources */,
 				CEE4EFB62A597FC90027A19A /* TipsTableViewCell.swift in Sources */,
 				CEE31E342A6476B700F6E4A0 /* ArticleEntity.swift in Sources */,
+				CEB618B62A81264600CCD5E4 /* VetsViewCoordinator.swift in Sources */,
 				CE1756732A572B64000F90C2 /* TipsViewController.swift in Sources */,
 				CE8FA3B92A4A0AC1007FC908 /* VetMap.xcdatamodeld in Sources */,
-				CE8FA3B32A4A0AC1007FC908 /* MapViewController.swift in Sources */,
+				CE8FA3B32A4A0AC1007FC908 /* VetsViewController.swift in Sources */,
 				CE7B3B172A5E0DE7004B8A21 /* DatabaseManager.swift in Sources */,
 				CE24CCB82A786D2A000F62CE /* LocationManagerProtocol.swift in Sources */,
-				CEB751732A4B0ACB0044709E /* MapViewVodel.swift in Sources */,
-				CE664D322A5362B500972046 /* CustomTabBar.swift in Sources */,
+				CEB751732A4B0ACB0044709E /* VetsViewModel.swift in Sources */,
+				CE664D322A5362B500972046 /* MainTabBarController.swift in Sources */,
 				CE8FA3C72A4A0F5C007FC908 /* LocationManager.swift in Sources */,
 				CE8FA3AF2A4A0AC1007FC908 /* AppDelegate.swift in Sources */,
 				CE24CCA92A785AA4000F62CE /* InjectionClass.swift in Sources */,
+				CEB618BD2A812CEA00CCD5E4 /* CoordinatorProtocol.swift in Sources */,
 				CE24CCB02A785E6F000F62CE /* ImagesManagerProtocol.swift in Sources */,
 				CE24CCAB2A785AB2000F62CE /* @Injected.swift in Sources */,
 				CE24CCAE2A785BA4000F62CE /* DatabaseManagerProtocol.swift in Sources */,
 				CE8FA3CC2A4A23E5007FC908 /* MapManager.swift in Sources */,
 				CE5121AB2A505C3B00C5B7E7 /*  UIViewController+ adjustLargeTitleSize().swift in Sources */,
+				CEB618AF2A81236800CCD5E4 /* AppointmentsViewModel.swift in Sources */,
 				CE37D7C02A57466900E89AAB /* FirebaseManager.swift in Sources */,
+				CE64595C2A7DA8EE009B061A /* AppointmentsScreenView.swift in Sources */,
+				CEB618C92A819C8800CCD5E4 /* AppointmentsViewCoordinator.swift in Sources */,
+				CE64595E2A7DAC19009B061A /* AppointmentsViewController.swift in Sources */,
 				CE67DCAC2A5C740A00C73305 /* Errors.swift in Sources */,
 				CE5121A92A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift in Sources */,
 				CE24CCB42A786B03000F62CE /* MapManagerProtocol.swift in Sources */,
 				CE8FA3B12A4A0AC1007FC908 /* SceneDelegate.swift in Sources */,
 				CE24CCB22A78681A000F62CE /* FirebaseManagerProtocol.swift in Sources */,
 				CEE4EFB82A599ECA0027A19A /* ImagesManager.swift in Sources */,
+				CEB618CB2A81A19700CCD5E4 /* TipsViewCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

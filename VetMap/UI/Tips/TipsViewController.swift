@@ -9,13 +9,22 @@ import UIKit
 
 class TipsViewController: UIViewController {
     
-    let tipsViewModel = TipsViewModel()
+    let tipsViewModel: TipsViewModel
     
     let tipsTableView: UITableView = {
         let tipsTableView = UITableView()
         tipsTableView.separatorStyle = .none
         return tipsTableView
     }()
+    
+    public init(viewModel: TipsViewModel) {
+        self.tipsViewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

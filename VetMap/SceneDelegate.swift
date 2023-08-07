@@ -17,57 +17,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         
-        
-        let vetsViewController: MapViewController = {
-            let vetsViewController = MapViewController()
-            vetsViewController.view.backgroundColor = .white
-            vetsViewController.title = ""
-            vetsViewController.tabBarItem.image = UIImage(systemName: "pawprint")
-            vetsViewController.tabBarItem.title = "Vets"
-            return vetsViewController
-        }()
-        
-        let tipsViewController: TipsViewController = {
-            let tipsViewController = TipsViewController()
-            tipsViewController.view.backgroundColor = .white
-            tipsViewController.title = "Tips"
-            tipsViewController.tabBarItem.image = UIImage(systemName: "lightbulb")
-            tipsViewController.tabBarItem.title = "Tips"
-            return tipsViewController
-        }()
-        
-        let accountViewController: UserViewController = {
-            let accountViewController = UserViewController()
-            accountViewController.view.backgroundColor = .white
-            accountViewController.tabBarItem.image = UIImage(systemName: "person")
-            accountViewController.tabBarItem.title = "My Pet"
-            return accountViewController
-        }()
-        
-        
-        let vetsNavigationController = UINavigationController(rootViewController: vetsViewController)
-        vetsNavigationController.navigationItem.largeTitleDisplayMode = .always
-        
-        let tipsNavigationController = UINavigationController(rootViewController: tipsViewController)
-        tipsNavigationController.navigationBar.prefersLargeTitles = true
-        tipsNavigationController.navigationItem.largeTitleDisplayMode = .always
-        
-        let accountNavigationController = UINavigationController(rootViewController: accountViewController)
-        accountNavigationController.navigationBar.prefersLargeTitles = true
-        accountNavigationController.navigationItem.largeTitleDisplayMode = .always
-       
-        let tabBarController = CustomTabBarController()
-        tabBarController.tabBar.backgroundColor = .white.withAlphaComponent(0.9)
-        tabBarController.tabBar.tintColor = .systemTeal
-        tabBarController.tabBar.unselectedItemTintColor = .systemGray
-        
-        tabBarController.viewControllers = [vetsNavigationController, tipsNavigationController, accountNavigationController]
-
-        window.rootViewController = tabBarController
-        window.makeKeyAndVisible()
-        
+        window.rootViewController = MainTabBarController()
         self.window = window
-        
+        window.makeKeyAndVisible()
         
     }
 

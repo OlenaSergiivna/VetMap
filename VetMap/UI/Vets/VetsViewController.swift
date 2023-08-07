@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class VetsViewController: UIViewController, UITextFieldDelegate {
     
     private let map: MKMapView = {
         let mapView = MKMapView()
@@ -16,27 +16,32 @@ class MapViewController: UIViewController {
         return mapView
     }()
     
-    private let mapViewModel = MapViewModel()
+    private let vetsViewModel: VetsViewModel
+    
+    let searchController = UISearchController(searchResultsController: nil)
+    
+    
+    public init(viewModel: VetsViewModel) {
+        self.vetsViewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.addSubview(map)
-        
         map.delegate = self
         
-        mapViewModel.fetchMapData()
+        configureSearchController()
         
-        self.mapViewModel.mapTitle
-            .dropFirst(1)
-            .bind(to: self) { _, mapTitle in
-                
-                self.navigationItem.title = mapTitle
-                self.adjustLargeTitleSize()
-            }
+        vetsViewModel.fetchMapData()
         
         
-        self.mapViewModel.mapPin
+        self.vetsViewModel.mapPin
             .dropFirst(1)
             .bind(to: self) { _, pin in
                 pin.title = "Ви тут"
@@ -44,18 +49,18 @@ class MapViewController: UIViewController {
             }
         
         
-        self.mapViewModel.mapCenter
+        self.vetsViewModel.mapCenter
             .dropFirst(1)
             .bind(to: self) { _, mapCenter in
                 
                 let region = MKCoordinateRegion(center: mapCenter, span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
                 self.map.setRegion(region, animated: true)
                 
-                self.mapViewModel.getVetsAnnotations(for: region)
+                self.vetsViewModel.getVetsAnnotations(for: region)
             }
         
         
-        self.mapViewModel.vetsAnnotations
+        self.vetsViewModel.vetsAnnotations
             .dropFirst(1)
             .bind(to: self) { _, vetsAnnotations in
                 
@@ -70,10 +75,31 @@ class MapViewController: UIViewController {
         
         map.frame = view.bounds
     }
+    
+    func configureSearchController() {
+        
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
+        navigationItem.searchController = searchController
+        searchController.searchBar.searchTextField.textColor = .systemGray
+        searchController.searchBar.placeholder = "Шукати ветклінику"
+        searchController.obscuresBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        searchController.searchBar.searchTextField.backgroundColor = .white
+        searchController.searchBar.barTintColor = .white
+        searchController.searchBar.searchTextField.layer.cornerRadius = 15
+        
+        searchController.searchBar.isTranslucent = false
+        searchController.searchBar.searchTextField.tintColor = .white
+        searchController.searchBar.searchTextField.borderStyle = .none
+        
+        searchController.searchBar.searchTextField.delegate = self
+        searchController.searchBar.searchTextField.clearButtonMode = .always
+    }
 }
 
 
-extension MapViewController: MKMapViewDelegate {
+extension VetsViewController: MKMapViewDelegate {
     
     public func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
@@ -119,7 +145,7 @@ extension MapViewController: MKMapViewDelegate {
             
             let tagetLocation = annotation.coordinate
             
-            mapViewModel.buildARoute(targetLocation: tagetLocation) { routes in
+            vetsViewModel.buildARoute(targetLocation: tagetLocation) { routes in
                 guard let route = routes.first else { return }
                 
                 self.map.removeOverlays(mapView.overlays)
@@ -155,5 +181,12 @@ extension MapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
         map.removeOverlays(map.overlays)
+    }
+}
+
+extension VetsViewController: UISearchResultsUpdating, UISearchBarDelegate {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        //
     }
 }
