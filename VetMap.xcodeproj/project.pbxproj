@@ -21,9 +21,11 @@
 		CE24CCB82A786D2A000F62CE /* LocationManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CCB72A786D2A000F62CE /* LocationManagerProtocol.swift */; };
 		CE37D7C02A57466900E89AAB /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE37D7BF2A57466900E89AAB /* FirebaseManager.swift */; };
 		CE5121A92A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5121A82A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift */; };
-		CE5121AB2A505C3B00C5B7E7 /*  UIViewController+ adjustLargeTitleSize().swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5121AA2A505C3B00C5B7E7 /*  UIViewController+ adjustLargeTitleSize().swift */; };
+		CE5121AB2A505C3B00C5B7E7 /* UIViewController+adjustLargeTitleSize().swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5121AA2A505C3B00C5B7E7 /* UIViewController+adjustLargeTitleSize().swift */; };
 		CE64595C2A7DA8EE009B061A /* AppointmentsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE64595B2A7DA8EE009B061A /* AppointmentsScreenView.swift */; };
 		CE64595E2A7DAC19009B061A /* AppointmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE64595D2A7DAC19009B061A /* AppointmentsViewController.swift */; };
+		CE6599A22A83E50400AFE08A /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6599A12A83E50400AFE08A /* PaddingLabel.swift */; };
+		CE6599A42A83F08800AFE08A /* UILabel+setAttributedTextWithSystemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6599A32A83F08800AFE08A /* UILabel+setAttributedTextWithSystemImage.swift */; };
 		CE664D322A5362B500972046 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE664D312A5362B500972046 /* MainTabBarController.swift */; };
 		CE67DCAC2A5C740A00C73305 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67DCAB2A5C740A00C73305 /* Errors.swift */; };
 		CE7B3B172A5E0DE7004B8A21 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B3B162A5E0DE7004B8A21 /* DatabaseManager.swift */; };
@@ -64,9 +66,11 @@
 		CE24CCB72A786D2A000F62CE /* LocationManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerProtocol.swift; sourceTree = "<group>"; };
 		CE37D7BF2A57466900E89AAB /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		CE5121A82A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarkerAnnotationView.swift; sourceTree = "<group>"; };
-		CE5121AA2A505C3B00C5B7E7 /*  UIViewController+ adjustLargeTitleSize().swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " UIViewController+ adjustLargeTitleSize().swift"; sourceTree = "<group>"; };
+		CE5121AA2A505C3B00C5B7E7 /* UIViewController+adjustLargeTitleSize().swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+adjustLargeTitleSize().swift"; sourceTree = "<group>"; };
 		CE64595B2A7DA8EE009B061A /* AppointmentsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsScreenView.swift; sourceTree = "<group>"; };
 		CE64595D2A7DAC19009B061A /* AppointmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsViewController.swift; sourceTree = "<group>"; };
+		CE6599A12A83E50400AFE08A /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		CE6599A32A83F08800AFE08A /* UILabel+setAttributedTextWithSystemImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+setAttributedTextWithSystemImage.swift"; sourceTree = "<group>"; };
 		CE664D312A5362B500972046 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		CE67DCAB2A5C740A00C73305 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		CE7B3B162A5E0DE7004B8A21 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
@@ -153,7 +157,8 @@
 		CE5121AC2A505C4100C5B7E7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				CE5121AA2A505C3B00C5B7E7 /*  UIViewController+ adjustLargeTitleSize().swift */,
+				CE5121AA2A505C3B00C5B7E7 /* UIViewController+adjustLargeTitleSize().swift */,
+				CE6599A32A83F08800AFE08A /* UILabel+setAttributedTextWithSystemImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				CE64595B2A7DA8EE009B061A /* AppointmentsScreenView.swift */,
+				CE6599A12A83E50400AFE08A /* PaddingLabel.swift */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -460,12 +466,14 @@
 				CE24CCAB2A785AB2000F62CE /* @Injected.swift in Sources */,
 				CE24CCAE2A785BA4000F62CE /* DatabaseManagerProtocol.swift in Sources */,
 				CE8FA3CC2A4A23E5007FC908 /* MapManager.swift in Sources */,
-				CE5121AB2A505C3B00C5B7E7 /*  UIViewController+ adjustLargeTitleSize().swift in Sources */,
+				CE5121AB2A505C3B00C5B7E7 /* UIViewController+adjustLargeTitleSize().swift in Sources */,
+				CE6599A22A83E50400AFE08A /* PaddingLabel.swift in Sources */,
 				CEB618AF2A81236800CCD5E4 /* AppointmentsViewModel.swift in Sources */,
 				CE37D7C02A57466900E89AAB /* FirebaseManager.swift in Sources */,
 				CE64595C2A7DA8EE009B061A /* AppointmentsScreenView.swift in Sources */,
 				CEB618C92A819C8800CCD5E4 /* AppointmentsViewCoordinator.swift in Sources */,
 				CE64595E2A7DAC19009B061A /* AppointmentsViewController.swift in Sources */,
+				CE6599A42A83F08800AFE08A /* UILabel+setAttributedTextWithSystemImage.swift in Sources */,
 				CE67DCAC2A5C740A00C73305 /* Errors.swift in Sources */,
 				CE5121A92A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift in Sources */,
 				CE24CCB42A786B03000F62CE /* MapManagerProtocol.swift in Sources */,

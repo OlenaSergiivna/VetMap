@@ -23,7 +23,7 @@ class AppointmentsViewCoordinator: Coordinator {
             appointmentsViewController.view.backgroundColor = .white
             appointmentsViewController.tabBarItem.image = UIImage(systemName: "clock")
             appointmentsViewController.tabBarItem.title = "Appointments"
-            appointmentsViewController.title = "Appointments"
+//            appointmentsViewController.title = "Appointments"
             return appointmentsViewController
         }()
         

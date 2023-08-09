@@ -1,5 +1,5 @@
 //
-//   UIViewController+ adjustLargeTitleSize().swift
+//   UIViewController+adjustLargeTitleSize().swift
 //  VetMap
 //
 //  Created by user on 01.07.2023.
