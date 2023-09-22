@@ -26,6 +26,7 @@ class AppointmentsScreenView: UIView {
         upcomingPlansLabel.translatesAutoresizingMaskIntoConstraints = false
         upcomingPlansLabel.text = "Найближчі події"
         upcomingPlansLabel.font = .systemFont(ofSize: 24, weight: .semibold)
+//        upcomingPlansLabel.textColor = .white
         return upcomingPlansLabel
     }()
     
@@ -37,7 +38,7 @@ class AppointmentsScreenView: UIView {
         buttonConfiguration.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
         buttonConfiguration.baseBackgroundColor = .systemTeal
         buttonConfiguration.cornerStyle = .large
-        buttonConfiguration.baseForegroundColor = .white
+        buttonConfiguration.baseForegroundColor = .black
         
         var attText = AttributedString.init("+ Додати подію")
         attText.font = UIFont.systemFont(ofSize: 14.0, weight: .regular)
@@ -82,7 +83,7 @@ class AppointmentsScreenView: UIView {
     let appointmentDateView: UIView = {
         let appointmentDateView = UIView()
         appointmentDateView.translatesAutoresizingMaskIntoConstraints = false
-        appointmentDateView.backgroundColor = .systemTeal.withAlphaComponent(1)
+        appointmentDateView.backgroundColor = .systemTeal.withAlphaComponent(0.8)
         appointmentDateView.layer.cornerRadius = 10
         return appointmentDateView
     }()
@@ -92,6 +93,7 @@ class AppointmentsScreenView: UIView {
         appointmentDayLabel.translatesAutoresizingMaskIntoConstraints = false
         appointmentDayLabel.textColor = .white
         appointmentDayLabel.font = .systemFont(ofSize: 14, weight: .semibold)
+        appointmentDayLabel.adjustsFontSizeToFitWidth = true
         appointmentDayLabel.setAttributedTextWithSystemImage(imageName: "calendar", text: "Понеділок, Серпень 1")
         return appointmentDayLabel
     }()
@@ -101,6 +103,7 @@ class AppointmentsScreenView: UIView {
         appointmentTimeLabel.translatesAutoresizingMaskIntoConstraints = false
         appointmentTimeLabel.textColor = .white
         appointmentTimeLabel.font = .systemFont(ofSize: 14, weight: .semibold)
+        appointmentTimeLabel.adjustsFontSizeToFitWidth = true
         appointmentTimeLabel.setAttributedTextWithSystemImage(imageName: "clock", text: "11:00 - 12:00")
         return appointmentTimeLabel
     }()
@@ -142,10 +145,53 @@ class AppointmentsScreenView: UIView {
         return vetsNameLocationStack
     }()
     
+    let callTaxiButton: UIButton = {
+        let callTaxiButton = UIButton()
+        callTaxiButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        var callTaxiButtonConfiguration = UIButton.Configuration.filled()
+        callTaxiButtonConfiguration.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 8, bottom: 20, trailing: 8)
+        callTaxiButtonConfiguration.baseBackgroundColor = .systemTeal
+        callTaxiButtonConfiguration.cornerStyle = .medium
+        callTaxiButtonConfiguration.baseForegroundColor = .white
+        
+        var attText = AttributedString.init("Замовити таксі")
+        attText.font = UIFont.systemFont(ofSize: 16.0, weight: .medium)
+        callTaxiButtonConfiguration.attributedTitle = attText
+        
+        callTaxiButton.configuration = callTaxiButtonConfiguration
+        
+        return callTaxiButton
+    }()
+    
+    let rescheduleAppointmentButton: UIButton = {
+        let rescheduleAppointmentButton = UIButton()
+        rescheduleAppointmentButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        var rescheduleAppointmentButtonConf = UIButton.Configuration.plain()
+        rescheduleAppointmentButtonConf.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 8, bottom: 20, trailing: 8)
+        
+        var background = rescheduleAppointmentButtonConf.background
+        background.strokeWidth = 1
+        background.strokeColor = UIColor.systemGray5
+        rescheduleAppointmentButtonConf.background = background
+        
+        rescheduleAppointmentButtonConf.cornerStyle = .medium
+        rescheduleAppointmentButtonConf.baseForegroundColor = .systemTeal
+        
+        var attText = AttributedString.init("Перенести подію")
+        attText.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        rescheduleAppointmentButtonConf.attributedTitle = attText
+        
+        rescheduleAppointmentButton.configuration = rescheduleAppointmentButtonConf
+        
+        return rescheduleAppointmentButton
+    }()
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        backgroundColor = .systemTeal
         addSubview(mainScrollView)
         mainScrollView.addSubview(contentView)
         contentView.addSubview(upcomingPlansLabel)
@@ -157,6 +203,8 @@ class AppointmentsScreenView: UIView {
         backAppointmentView.addSubview(appointmentImageView)
         backAppointmentView.addSubview(appointmentDateView)
         backAppointmentView.addSubview(vetsNameLocationStack)
+        backAppointmentView.addSubview(rescheduleAppointmentButton)
+        backAppointmentView.addSubview(callTaxiButton)
         
         vetsNameLocationStack.addArrangedSubview(vetsNameLabel)
         vetsNameLocationStack.addArrangedSubview(locationLabel)
@@ -167,14 +215,14 @@ class AppointmentsScreenView: UIView {
         NSLayoutConstraint.activate([
             mainScrollView.topAnchor.constraint(equalTo: topAnchor),
             mainScrollView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            mainScrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            mainScrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            mainScrollView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            mainScrollView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
             
             contentView.topAnchor.constraint(equalTo: mainScrollView.topAnchor),
             contentView.bottomAnchor.constraint(equalTo: mainScrollView.bottomAnchor),
             contentView.leadingAnchor.constraint(equalTo: mainScrollView.leadingAnchor),
             contentView.trailingAnchor.constraint(equalTo: mainScrollView.trailingAnchor),
-            contentView.widthAnchor.constraint(equalTo: widthAnchor),
+            contentView.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor),
             contentView.heightAnchor.constraint(greaterThanOrEqualTo: heightAnchor),
             
             upcomingPlansLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
@@ -196,7 +244,6 @@ class AppointmentsScreenView: UIView {
             appointmentTypeLabel.topAnchor.constraint(equalTo: backAppointmentView.topAnchor, constant: 16),
             appointmentTypeLabel.leadingAnchor.constraint(equalTo: backAppointmentView.leadingAnchor, constant: 16),
             
-            
             appointmentImageView.leadingAnchor.constraint(equalTo: appointmentTypeLabel.leadingAnchor),
             appointmentImageView.heightAnchor.constraint(equalTo: backAppointmentView.heightAnchor, multiplier: 0.15),
             appointmentImageView.widthAnchor.constraint(equalTo: backAppointmentView.heightAnchor, multiplier: 0.15),
@@ -209,13 +256,25 @@ class AppointmentsScreenView: UIView {
             appointmentDateView.topAnchor.constraint(equalTo: vetsNameLocationStack.bottomAnchor, constant: 16),
             appointmentDateView.leadingAnchor.constraint(equalTo: backAppointmentView.leadingAnchor, constant: 16),
             appointmentDateView.trailingAnchor.constraint(equalTo: backAppointmentView.trailingAnchor, constant: -16),
-            appointmentDateView.heightAnchor.constraint(equalTo: backAppointmentView.heightAnchor, multiplier: 0.25),
+            appointmentDateView.heightAnchor.constraint(equalTo: backAppointmentView.heightAnchor, multiplier: 0.2),
             
             appointmentDayLabel.centerYAnchor.constraint(equalTo: appointmentDateView.centerYAnchor),
             appointmentDayLabel.leadingAnchor.constraint(equalTo: appointmentDateView.leadingAnchor, constant: 16),
+            appointmentDayLabel.trailingAnchor.constraint(lessThanOrEqualTo: appointmentTimeLabel.leadingAnchor, constant: -8),
             
             appointmentTimeLabel.centerYAnchor.constraint(equalTo: appointmentDayLabel.centerYAnchor),
-            appointmentTimeLabel.trailingAnchor.constraint(equalTo: appointmentDateView.trailingAnchor, constant: -16)
+            appointmentTimeLabel.trailingAnchor.constraint(equalTo: appointmentDateView.trailingAnchor, constant: -16),
+            
+            rescheduleAppointmentButton.topAnchor.constraint(equalTo: appointmentDateView.bottomAnchor, constant: 16),
+            rescheduleAppointmentButton.leadingAnchor.constraint(equalTo: backAppointmentView.leadingAnchor, constant: 16),
+            rescheduleAppointmentButton.trailingAnchor.constraint(equalTo: backAppointmentView.centerXAnchor, constant: -4),
+            rescheduleAppointmentButton.bottomAnchor.constraint(equalTo: backAppointmentView.bottomAnchor, constant: -16),
+            
+            callTaxiButton.topAnchor.constraint(equalTo: rescheduleAppointmentButton.topAnchor),
+            callTaxiButton.leadingAnchor.constraint(equalTo: backAppointmentView.centerXAnchor, constant: 4),
+            callTaxiButton.trailingAnchor.constraint(equalTo: backAppointmentView.trailingAnchor, constant: -16),
+            callTaxiButton.bottomAnchor.constraint(equalTo: backAppointmentView.bottomAnchor, constant: -16)
+            
         ])
     }
     

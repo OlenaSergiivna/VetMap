@@ -8,9 +8,13 @@
 import Foundation
 import CoreData
 
-struct DatabaseManager: DatabaseManagerProtocol {
+protocol DatabaseManager {
+    func getUpdatedArticles(_ completion: @escaping (Result<[Article], Error>) -> Void)
+}
+
+struct DatabaseManagerImpl: DatabaseManager {
     
-    @Injected var firebaseManager: FirebaseManagerProtocol
+    var firebaseManager: FirebaseManager
     
     let context = AppDelegate.viewContext
     

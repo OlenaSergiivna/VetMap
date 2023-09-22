@@ -8,7 +8,16 @@
 import Foundation
 import Kingfisher
 
-struct ImagesManager: ImagesManagerProtocol {
+protocol ImagesManager {
+    func setImage(imagePath: String, setFor image: UIImageView, cornerRadius: CGFloat)
+    
+    func setCasheLimits()
+    
+    func clearCashe()
+}
+
+
+struct ImagesManagerImpl: ImagesManager {
     
     func setImage(imagePath: String, setFor image: UIImageView, cornerRadius: CGFloat = 0) {
         

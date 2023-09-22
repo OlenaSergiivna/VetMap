@@ -8,7 +8,15 @@
 import Foundation
 import MapKit
 
-class MapManager: MapManagerProtocol {
+protocol MapManager {
+    func createMapPin(with location: CLLocation, completion: @escaping(MKPointAnnotation?) -> Void)
+    
+    func searchVeterinaryClinics(for region: MKCoordinateRegion, completion: @escaping ([MKMapItem]) -> Void)
+
+    func drawARoute(userLocation: CLLocationCoordinate2D, targetLocation: CLLocationCoordinate2D, completion: @escaping (Result<[MKRoute], Error>) -> Void)
+}
+
+class MapManagerImpl : MapManager {
     
     func createMapPin(with location: CLLocation, completion: @escaping(MKPointAnnotation?) -> Void) {
         

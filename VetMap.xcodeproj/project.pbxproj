@@ -12,13 +12,12 @@
 		CE1756752A572B7D000F90C2 /* TipsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1756742A572B7D000F90C2 /* TipsViewModel.swift */; };
 		CE1756772A572B93000F90C2 /* ArticleModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1756762A572B93000F90C2 /* ArticleModels.swift */; };
 		CE17567B2A573D34000F90C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE17567A2A573D34000F90C2 /* GoogleService-Info.plist */; };
-		CE24CCA92A785AA4000F62CE /* InjectionClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CCA82A785AA4000F62CE /* InjectionClass.swift */; };
-		CE24CCAB2A785AB2000F62CE /* @Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CCAA2A785AB2000F62CE /* @Injected.swift */; };
-		CE24CCAE2A785BA4000F62CE /* DatabaseManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CCAD2A785BA4000F62CE /* DatabaseManagerProtocol.swift */; };
-		CE24CCB02A785E6F000F62CE /* ImagesManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CCAF2A785E6F000F62CE /* ImagesManagerProtocol.swift */; };
-		CE24CCB22A78681A000F62CE /* FirebaseManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CCB12A78681A000F62CE /* FirebaseManagerProtocol.swift */; };
-		CE24CCB42A786B03000F62CE /* MapManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CCB32A786B03000F62CE /* MapManagerProtocol.swift */; };
-		CE24CCB82A786D2A000F62CE /* LocationManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24CCB72A786D2A000F62CE /* LocationManagerProtocol.swift */; };
+		CE291CD92ABDF92B009372AF /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE291CD82ABDF92B009372AF /* AuthViewModel.swift */; };
+		CE291CDB2ABDF974009372AF /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE291CDA2ABDF974009372AF /* AuthViewController.swift */; };
+		CE291CDD2ABDF9F0009372AF /* AuthViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE291CDC2ABDF9F0009372AF /* AuthViewCoordinator.swift */; };
+		CE291CE42ABE0B29009372AF /* SignUpViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE291CE32ABE0B29009372AF /* SignUpViewCoordinator.swift */; };
+		CE291CE62ABE0B49009372AF /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE291CE52ABE0B49009372AF /* SignUpViewModel.swift */; };
+		CE291CE82ABE0B7E009372AF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE291CE72ABE0B7E009372AF /* SignUpViewController.swift */; };
 		CE37D7C02A57466900E89AAB /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE37D7BF2A57466900E89AAB /* FirebaseManager.swift */; };
 		CE5121A92A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5121A82A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift */; };
 		CE5121AB2A505C3B00C5B7E7 /* UIViewController+adjustLargeTitleSize().swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5121AA2A505C3B00C5B7E7 /* UIViewController+adjustLargeTitleSize().swift */; };
@@ -29,6 +28,8 @@
 		CE664D322A5362B500972046 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE664D312A5362B500972046 /* MainTabBarController.swift */; };
 		CE67DCAC2A5C740A00C73305 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67DCAB2A5C740A00C73305 /* Errors.swift */; };
 		CE7B3B172A5E0DE7004B8A21 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B3B162A5E0DE7004B8A21 /* DatabaseManager.swift */; };
+		CE89D0472ABDD45500F48C1E /* AppMainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89D0462ABDD45500F48C1E /* AppMainCoordinator.swift */; };
+		CE89D0492ABDD48100F48C1E /* AppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89D0482ABDD48100F48C1E /* AppDependencyContainer.swift */; };
 		CE8FA3AF2A4A0AC1007FC908 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA3AE2A4A0AC1007FC908 /* AppDelegate.swift */; };
 		CE8FA3B12A4A0AC1007FC908 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA3B02A4A0AC1007FC908 /* SceneDelegate.swift */; };
 		CE8FA3B32A4A0AC1007FC908 /* VetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FA3B22A4A0AC1007FC908 /* VetsViewController.swift */; };
@@ -57,13 +58,12 @@
 		CE1756742A572B7D000F90C2 /* TipsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewModel.swift; sourceTree = "<group>"; };
 		CE1756762A572B93000F90C2 /* ArticleModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModels.swift; sourceTree = "<group>"; };
 		CE17567A2A573D34000F90C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		CE24CCA82A785AA4000F62CE /* InjectionClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionClass.swift; sourceTree = "<group>"; };
-		CE24CCAA2A785AB2000F62CE /* @Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "@Injected.swift"; sourceTree = "<group>"; };
-		CE24CCAD2A785BA4000F62CE /* DatabaseManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManagerProtocol.swift; sourceTree = "<group>"; };
-		CE24CCAF2A785E6F000F62CE /* ImagesManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesManagerProtocol.swift; sourceTree = "<group>"; };
-		CE24CCB12A78681A000F62CE /* FirebaseManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManagerProtocol.swift; sourceTree = "<group>"; };
-		CE24CCB32A786B03000F62CE /* MapManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManagerProtocol.swift; sourceTree = "<group>"; };
-		CE24CCB72A786D2A000F62CE /* LocationManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerProtocol.swift; sourceTree = "<group>"; };
+		CE291CD82ABDF92B009372AF /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		CE291CDA2ABDF974009372AF /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		CE291CDC2ABDF9F0009372AF /* AuthViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewCoordinator.swift; sourceTree = "<group>"; };
+		CE291CE32ABE0B29009372AF /* SignUpViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewCoordinator.swift; sourceTree = "<group>"; };
+		CE291CE52ABE0B49009372AF /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		CE291CE72ABE0B7E009372AF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CE37D7BF2A57466900E89AAB /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		CE5121A82A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarkerAnnotationView.swift; sourceTree = "<group>"; };
 		CE5121AA2A505C3B00C5B7E7 /* UIViewController+adjustLargeTitleSize().swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+adjustLargeTitleSize().swift"; sourceTree = "<group>"; };
@@ -74,6 +74,8 @@
 		CE664D312A5362B500972046 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		CE67DCAB2A5C740A00C73305 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		CE7B3B162A5E0DE7004B8A21 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		CE89D0462ABDD45500F48C1E /* AppMainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMainCoordinator.swift; sourceTree = "<group>"; };
+		CE89D0482ABDD48100F48C1E /* AppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyContainer.swift; sourceTree = "<group>"; };
 		CE8FA3AB2A4A0AC1007FC908 /* VetMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VetMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8FA3AE2A4A0AC1007FC908 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE8FA3B02A4A0AC1007FC908 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,33 +127,97 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CE24CCA72A7859E3000F62CE /* DependencyInjection */ = {
+		CE291CD42ABDF8F6009372AF /* AuthScreen */ = {
 			isa = PBXGroup;
 			children = (
-				CE24CCA82A785AA4000F62CE /* InjectionClass.swift */,
-				CE24CCAA2A785AB2000F62CE /* @Injected.swift */,
+				CE291CD72ABDF915009372AF /* Coordinator */,
+				CE291CD62ABDF910009372AF /* ViewModel */,
+				CE291CD52ABDF90B009372AF /* View */,
 			);
-			path = DependencyInjection;
+			path = AuthScreen;
 			sourceTree = "<group>";
 		};
-		CE24CCAC2A785B68000F62CE /* Protocols */ = {
+		CE291CD52ABDF90B009372AF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CE24CCB72A786D2A000F62CE /* LocationManagerProtocol.swift */,
-				CE24CCB32A786B03000F62CE /* MapManagerProtocol.swift */,
-				CE24CCB12A78681A000F62CE /* FirebaseManagerProtocol.swift */,
-				CE24CCAF2A785E6F000F62CE /* ImagesManagerProtocol.swift */,
-				CE24CCAD2A785BA4000F62CE /* DatabaseManagerProtocol.swift */,
+				CE291CDA2ABDF974009372AF /* AuthViewController.swift */,
 			);
-			path = Protocols;
+			path = View;
 			sourceTree = "<group>";
 		};
-		CE2A62C12A81B3AD00306E2E /* Coordinators */ = {
+		CE291CD62ABDF910009372AF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				CEB618BC2A812CEA00CCD5E4 /* CoordinatorProtocol.swift */,
+				CE291CD82ABDF92B009372AF /* AuthViewModel.swift */,
 			);
-			path = Coordinators;
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE291CD72ABDF915009372AF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CE291CDC2ABDF9F0009372AF /* AuthViewCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		CE291CDE2ABE0A87009372AF /* SignUpScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CE291CE02ABE0AD2009372AF /* SignUpViewCoordinator */,
+				CE291CE12ABE0AEA009372AF /* SignUpViewModel */,
+				CE291CE22ABE0AF5009372AF /* SignUpViewController */,
+			);
+			path = SignUpScreen;
+			sourceTree = "<group>";
+		};
+		CE291CE02ABE0AD2009372AF /* SignUpViewCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CE291CE32ABE0B29009372AF /* SignUpViewCoordinator.swift */,
+			);
+			path = SignUpViewCoordinator;
+			sourceTree = "<group>";
+		};
+		CE291CE12ABE0AEA009372AF /* SignUpViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE291CE52ABE0B49009372AF /* SignUpViewModel.swift */,
+			);
+			path = SignUpViewModel;
+			sourceTree = "<group>";
+		};
+		CE291CE22ABE0AF5009372AF /* SignUpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE291CE72ABE0B7E009372AF /* SignUpViewController.swift */,
+			);
+			path = SignUpViewController;
+			sourceTree = "<group>";
+		};
+		CE43CE752ABE303100783E28 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CE5121AC2A505C4100C5B7E7 /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CE43CE762ABE30E200783E28 /* FirebaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				CE37D7BF2A57466900E89AAB /* FirebaseManager.swift */,
+				CE43CE772ABE310A00783E28 /* FirebaseConfig */,
+			);
+			path = FirebaseManager;
+			sourceTree = "<group>";
+		};
+		CE43CE772ABE310A00783E28 /* FirebaseConfig */ = {
+			isa = PBXGroup;
+			children = (
+				CE17567A2A573D34000F90C2 /* GoogleService-Info.plist */,
+			);
+			path = FirebaseConfig;
 			sourceTree = "<group>";
 		};
 		CE5121AC2A505C4100C5B7E7 /* Extensions */ = {
@@ -170,6 +236,108 @@
 				CE6599A12A83E50400AFE08A /* PaddingLabel.swift */,
 			);
 			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		CE89D04A2ABDE1BC00F48C1E /* AppMainCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CE89D0462ABDD45500F48C1E /* AppMainCoordinator.swift */,
+				CEB618BC2A812CEA00CCD5E4 /* CoordinatorProtocol.swift */,
+			);
+			path = AppMainCoordinator;
+			sourceTree = "<group>";
+		};
+		CE89D04B2ABDE52200F48C1E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CEB618B52A81264600CCD5E4 /* VetsViewCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		CE89D04C2ABDE53400F48C1E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CEB751722A4B0ACB0044709E /* VetsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE89D04D2ABDE55000F48C1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE8FA3B22A4A0AC1007FC908 /* VetsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE89D04E2ABDE56D00F48C1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE64595D2A7DAC19009B061A /* AppointmentsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE89D04F2ABDE57400F48C1E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CEB618AE2A81236800CCD5E4 /* AppointmentsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE89D0502ABDE57F00F48C1E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CEB618C82A819C8800CCD5E4 /* AppointmentsViewCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		CE89D0512ABDE59300F48C1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE1756722A572B64000F90C2 /* TipsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE89D0522ABDE5A000F48C1E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE1756742A572B7D000F90C2 /* TipsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE89D0532ABDE5AF00F48C1E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CEB618CA2A81A19700CCD5E4 /* TipsViewCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		CE89D0542ABDE5D100F48C1E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE8FA3BA2A4A0AC4007FC908 /* Assets.xcassets */,
+				CE8FA3BC2A4A0AC4007FC908 /* LaunchScreen.storyboard */,
+				CE8FA3BF2A4A0AC4007FC908 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE89D0552ABDE64800F48C1E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CE8FA3AE2A4A0AC1007FC908 /* AppDelegate.swift */,
+				CE8FA3B02A4A0AC1007FC908 /* SceneDelegate.swift */,
+				CE89D0482ABDD48100F48C1E /* AppDependencyContainer.swift */,
+				CE89D04A2ABDE1BC00F48C1E /* AppMainCoordinator */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 		CE8FA3A22A4A0AC1007FC908 = {
@@ -194,15 +362,11 @@
 		CE8FA3AD2A4A0AC1007FC908 /* VetMap */ = {
 			isa = PBXGroup;
 			children = (
-				CE8FA3AE2A4A0AC1007FC908 /* AppDelegate.swift */,
-				CE8FA3B02A4A0AC1007FC908 /* SceneDelegate.swift */,
+				CE89D0552ABDE64800F48C1E /* Application */,
 				CEB618B02A81239300CCD5E4 /* Bussiness */,
 				CEB618AA2A81227200CCD5E4 /* UI */,
-				CE5121AC2A505C4100C5B7E7 /* Extensions */,
-				CE8FA3BC2A4A0AC4007FC908 /* LaunchScreen.storyboard */,
-				CE8FA3BA2A4A0AC4007FC908 /* Assets.xcassets */,
-				CE17567A2A573D34000F90C2 /* GoogleService-Info.plist */,
-				CE8FA3BF2A4A0AC4007FC908 /* Info.plist */,
+				CE43CE752ABE303100783E28 /* Common */,
+				CE89D0542ABDE5D100F48C1E /* Resources */,
 				CE8FA3B72A4A0AC1007FC908 /* VetMap.xcdatamodeld */,
 			);
 			path = VetMap;
@@ -211,10 +375,9 @@
 		CE8FA3C52A4A0F45007FC908 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				CE24CCAC2A785B68000F62CE /* Protocols */,
+				CE43CE762ABE30E200783E28 /* FirebaseManager */,
 				CE8FA3C62A4A0F5C007FC908 /* LocationManager.swift */,
 				CE8FA3CB2A4A23E5007FC908 /* MapManager.swift */,
-				CE37D7BF2A57466900E89AAB /* FirebaseManager.swift */,
 				CEE4EFB72A599ECA0027A19A /* ImagesManager.swift */,
 				CE7B3B162A5E0DE7004B8A21 /* DatabaseManager.swift */,
 			);
@@ -233,11 +396,12 @@
 		CEB618AA2A81227200CCD5E4 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				CE291CD42ABDF8F6009372AF /* AuthScreen */,
+				CE291CDE2ABE0A87009372AF /* SignUpScreen */,
 				CEB618AC2A81231000CCD5E4 /* Vets */,
 				CEB618AB2A8122CE00CCD5E4 /* Appointments */,
 				CEB618AD2A81231900CCD5E4 /* Tips */,
-				CE2A62C12A81B3AD00306E2E /* Coordinators */,
-				CEB618B22A81240A00CCD5E4 /* TabBar */,
+				CEB618B22A81240A00CCD5E4 /* MainTabBar */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -245,9 +409,9 @@
 		CEB618AB2A8122CE00CCD5E4 /* Appointments */ = {
 			isa = PBXGroup;
 			children = (
-				CEB618C82A819C8800CCD5E4 /* AppointmentsViewCoordinator.swift */,
-				CE64595D2A7DAC19009B061A /* AppointmentsViewController.swift */,
-				CEB618AE2A81236800CCD5E4 /* AppointmentsViewModel.swift */,
+				CE89D0502ABDE57F00F48C1E /* Coordinator */,
+				CE89D04F2ABDE57400F48C1E /* ViewModel */,
+				CE89D04E2ABDE56D00F48C1E /* View */,
 				CE64595A2A7DA88C009B061A /* CustomUI */,
 			);
 			path = Appointments;
@@ -256,9 +420,9 @@
 		CEB618AC2A81231000CCD5E4 /* Vets */ = {
 			isa = PBXGroup;
 			children = (
-				CEB618B52A81264600CCD5E4 /* VetsViewCoordinator.swift */,
-				CE8FA3B22A4A0AC1007FC908 /* VetsViewController.swift */,
-				CEB751722A4B0ACB0044709E /* VetsViewModel.swift */,
+				CE89D04B2ABDE52200F48C1E /* Coordinator */,
+				CE89D04C2ABDE53400F48C1E /* ViewModel */,
+				CE89D04D2ABDE55000F48C1E /* View */,
 				CEB618B12A8123E600CCD5E4 /* CustomUI */,
 			);
 			path = Vets;
@@ -267,9 +431,9 @@
 		CEB618AD2A81231900CCD5E4 /* Tips */ = {
 			isa = PBXGroup;
 			children = (
-				CEB618CA2A81A19700CCD5E4 /* TipsViewCoordinator.swift */,
-				CE1756722A572B64000F90C2 /* TipsViewController.swift */,
-				CE1756742A572B7D000F90C2 /* TipsViewModel.swift */,
+				CE89D0532ABDE5AF00F48C1E /* Coordinator */,
+				CE89D0522ABDE5A000F48C1E /* ViewModel */,
+				CE89D0512ABDE59300F48C1E /* View */,
 				CEB618B32A81245500CCD5E4 /* CustomUI */,
 			);
 			path = Tips;
@@ -280,7 +444,6 @@
 			children = (
 				CE8FA3C52A4A0F45007FC908 /* Managers */,
 				CE8FA3C92A4A23A3007FC908 /* Models */,
-				CE24CCA72A7859E3000F62CE /* DependencyInjection */,
 				CEB618B42A8124A200CCD5E4 /* ErrorHandling */,
 			);
 			path = Bussiness;
@@ -294,12 +457,12 @@
 			path = CustomUI;
 			sourceTree = "<group>";
 		};
-		CEB618B22A81240A00CCD5E4 /* TabBar */ = {
+		CEB618B22A81240A00CCD5E4 /* MainTabBar */ = {
 			isa = PBXGroup;
 			children = (
 				CE664D312A5362B500972046 /* MainTabBarController.swift */,
 			);
-			path = TabBar;
+			path = MainTabBar;
 			sourceTree = "<group>";
 		};
 		CEB618B32A81245500CCD5E4 /* CustomUI */ = {
@@ -450,37 +613,38 @@
 				CE1756772A572B93000F90C2 /* ArticleModels.swift in Sources */,
 				CEE4EFB62A597FC90027A19A /* TipsTableViewCell.swift in Sources */,
 				CEE31E342A6476B700F6E4A0 /* ArticleEntity.swift in Sources */,
+				CE291CDB2ABDF974009372AF /* AuthViewController.swift in Sources */,
 				CEB618B62A81264600CCD5E4 /* VetsViewCoordinator.swift in Sources */,
+				CE291CE82ABE0B7E009372AF /* SignUpViewController.swift in Sources */,
+				CE291CDD2ABDF9F0009372AF /* AuthViewCoordinator.swift in Sources */,
 				CE1756732A572B64000F90C2 /* TipsViewController.swift in Sources */,
 				CE8FA3B92A4A0AC1007FC908 /* VetMap.xcdatamodeld in Sources */,
 				CE8FA3B32A4A0AC1007FC908 /* VetsViewController.swift in Sources */,
 				CE7B3B172A5E0DE7004B8A21 /* DatabaseManager.swift in Sources */,
-				CE24CCB82A786D2A000F62CE /* LocationManagerProtocol.swift in Sources */,
 				CEB751732A4B0ACB0044709E /* VetsViewModel.swift in Sources */,
 				CE664D322A5362B500972046 /* MainTabBarController.swift in Sources */,
 				CE8FA3C72A4A0F5C007FC908 /* LocationManager.swift in Sources */,
 				CE8FA3AF2A4A0AC1007FC908 /* AppDelegate.swift in Sources */,
-				CE24CCA92A785AA4000F62CE /* InjectionClass.swift in Sources */,
 				CEB618BD2A812CEA00CCD5E4 /* CoordinatorProtocol.swift in Sources */,
-				CE24CCB02A785E6F000F62CE /* ImagesManagerProtocol.swift in Sources */,
-				CE24CCAB2A785AB2000F62CE /* @Injected.swift in Sources */,
-				CE24CCAE2A785BA4000F62CE /* DatabaseManagerProtocol.swift in Sources */,
 				CE8FA3CC2A4A23E5007FC908 /* MapManager.swift in Sources */,
 				CE5121AB2A505C3B00C5B7E7 /* UIViewController+adjustLargeTitleSize().swift in Sources */,
 				CE6599A22A83E50400AFE08A /* PaddingLabel.swift in Sources */,
 				CEB618AF2A81236800CCD5E4 /* AppointmentsViewModel.swift in Sources */,
 				CE37D7C02A57466900E89AAB /* FirebaseManager.swift in Sources */,
+				CE89D0492ABDD48100F48C1E /* AppDependencyContainer.swift in Sources */,
 				CE64595C2A7DA8EE009B061A /* AppointmentsScreenView.swift in Sources */,
 				CEB618C92A819C8800CCD5E4 /* AppointmentsViewCoordinator.swift in Sources */,
 				CE64595E2A7DAC19009B061A /* AppointmentsViewController.swift in Sources */,
 				CE6599A42A83F08800AFE08A /* UILabel+setAttributedTextWithSystemImage.swift in Sources */,
 				CE67DCAC2A5C740A00C73305 /* Errors.swift in Sources */,
+				CE291CE62ABE0B49009372AF /* SignUpViewModel.swift in Sources */,
+				CE89D0472ABDD45500F48C1E /* AppMainCoordinator.swift in Sources */,
+				CE291CD92ABDF92B009372AF /* AuthViewModel.swift in Sources */,
 				CE5121A92A504F6D00C5B7E7 /* CustomMarkerAnnotationView.swift in Sources */,
-				CE24CCB42A786B03000F62CE /* MapManagerProtocol.swift in Sources */,
 				CE8FA3B12A4A0AC1007FC908 /* SceneDelegate.swift in Sources */,
-				CE24CCB22A78681A000F62CE /* FirebaseManagerProtocol.swift in Sources */,
 				CEE4EFB82A599ECA0027A19A /* ImagesManager.swift in Sources */,
 				CEB618CB2A81A19700CCD5E4 /* TipsViewCoordinator.swift in Sources */,
+				CE291CE42ABE0B29009372AF /* SignUpViewCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,7 +788,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T999GJYMD3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = VetMap/Info.plist;
+				INFOPLIST_FILE = VetMap/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = VetMap;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -639,6 +803,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.VetMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -655,7 +822,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T999GJYMD3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = VetMap/Info.plist;
+				INFOPLIST_FILE = VetMap/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = VetMap;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -670,6 +837,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.VetMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

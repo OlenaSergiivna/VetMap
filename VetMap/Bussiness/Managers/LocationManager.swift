@@ -8,7 +8,14 @@
 import Foundation
 import CoreLocation
 
-class LocationManager: NSObject, CLLocationManagerDelegate, LocationManagerProtocol {
+protocol LocationManager {
+    func getUserLocation(completion: @escaping (CLLocation)-> Void)
+    
+    func getLocationName(with location: CLLocation, completion: @escaping (String?) -> Void)
+}
+
+
+class LocationManagerImpl: NSObject, CLLocationManagerDelegate, LocationManager {
     
     let manager = CLLocationManager()
     

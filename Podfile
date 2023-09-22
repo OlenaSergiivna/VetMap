@@ -7,7 +7,6 @@ target 'VetMap' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Kingfisher'
-  pod 'Swinject'
 
 end
 
